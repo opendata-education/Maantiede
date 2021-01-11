@@ -4,3 +4,4 @@ matplotlib
 numpy
 mapclassify
 descartes
+osmnx
