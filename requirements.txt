@@ -1,7 +1,4 @@
-pandas
-geopandas
+jupyter-book
 matplotlib
 numpy
-mapclassify
-descartes
-osmnx
+ghp-import
