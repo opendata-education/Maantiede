@@ -1,0 +1,462 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Street Map &#8212; Maantiede</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lyhimmän reitin analyysi" href="lyhimman_reitin_analyysi.html" />
+    <link rel="prev" title="Datan esittäminen kartalla" href="maailmankartta.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Maantiede</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Tervetuloa avoimen datan pariin
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../content.html">
+   Materiaali
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="maailmankartta.html">
+     Datan esittäminen kartalla
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Open Street Map
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lyhimman_reitin_analyysi.html">
+     Lyhimmän reitin analyysi
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/harjoitukset/openstreetmap.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/harjoitukset/openstreetmap.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="open-street-map">
+<h1>Open Street Map<a class="headerlink" href="#open-street-map" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://www.openstreetmap.org/">Open Street Map</a> (OSM) on avoin karttapalvelu, jossa käyttäjät voivat itse osallistua karttojen luomiseen. Koska kyseessä on avoin projekti, sen aineistoa voidaan hyödyntää vapaasti omiin tarkoituksiin (myös kaupallisiin). Pääsemme pythonilla käsiksi OSM:n aineistoon <a class="reference external" href="https://osmnx.readthedocs.io/en/stable/index.html">osmnx</a>-kirjaston avulla. Aineistosta voidaan hakea paljon kaikenlaista paikkatietoa, kuten tieverkostoja, rakennuksia, puistoja, ravintoloita jne.</p>
+<p>Tässä harjoituksessa tutustutaan osmnx-kirjastoon, haetaan sen avulla paikkatietoja Tampereen keskustorin lähettyviltä ja piirretään niitä kartalle. Lisäksi tässä harjoituksessa tarvitaan <a class="reference external" href="https://matplotlib.org/">matplotlib</a>-kirjastoa, joka sisältää funktioita kuvaajien piirtämistä varten.</p>
+<p>Aloitetaan hakemalla tarvittavat kirjastot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">osmnx</span> <span class="k">as</span> <span class="nn">ox</span>  <span class="c1"># Paikkatietojen hakemiseen ja käsittelyyn tarvittavia funktioita</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>  <span class="c1"># Kuvaajien piirtämiseen tarvittavia funktioita</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Määritellään seuraavaksi osoite, jonka ympäristöstä haluamme etsiä paikkatietoja, sekä etäisyys. Etsitään paikkatietoja 1km säteellä Tampereen keskustorista.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Määritellään osoite ja etäisyys ja tallennetaan ne muuttujiin &quot;address&quot; ja &quot;distance&quot;</span>
+
+<span class="n">address</span> <span class="o">=</span> <span class="s2">&quot;Keskustori 1, 33100, Tampere, Finland&quot;</span>
+<span class="n">distance</span> <span class="o">=</span> <span class="mi">1000</span> <span class="c1"># metriä</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Seuraavaksi voidaan hakea kuvaajaan tarvittavat tiedot <a class="reference external" href="https://osmnx.readthedocs.io/en/stable/osmnx.html#osmnx.graph.graph_from_address"><code class="docutils literal notranslate"><span class="pre">ox.graph_from_address()</span></code></a>-funktion avulla. Haetaan tiedot ja piirretään niistä kuvaaja <a class="reference external" href="https://osmnx.readthedocs.io/en/stable/osmnx.html#osmnx.plot.plot_graph"><code class="docutils literal notranslate"><span class="pre">ox.plot_graph()</span></code></a>-funktiolla.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Haetaan OpenStreetMapin katuverkosto &quot;graph_from_address&quot;-funktion avulla</span>
+<span class="n">graph</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">graph_from_address</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="n">distance</span><span class="p">)</span>
+
+<span class="c1"># Piirretään verkosto näytölle</span>
+<span class="n">ox</span><span class="o">.</span><span class="n">plot_graph</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/openstreetmap_5_0.png" src="../_images/openstreetmap_5_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;Figure size 576x576 with 1 Axes&gt;, &lt;AxesSubplot:&gt;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hienolta näyttää! Saimme parilla koodirivillä piirrettyä Tampereen keskustorin ympäristössä olevat tiet ja niiden risteyskohdat. Tavoitteenamme on seuraavaksi piirtää samaan kuvaan kaikki tiet sekä alueella olevat rakennukset.</p>
+<p>Aluksi eritellään kuvaajasta omaksi muuttujikseen teiden solmukohdat sekä tiet <a class="reference external" href="https://osmnx.readthedocs.io/en/stable/osmnx.html#osmnx.utils_graph.graph_to_gdfs"><code class="docutils literal notranslate"><span class="pre">ox.graph_to_gdfs()</span></code></a>-funktion avulla. Saamme haluamamme tiedot GeoDataFrame-muodossa, jotka ovat käytännössä taulukoita, jotka sisältävät muiden tietojen lisäksi paikkatietoja.</p>
+<p>Etsitään lisäksi lähistöllä olevat rakennukset <a class="reference external" href="https://osmnx.readthedocs.io/en/stable/osmnx.html#osmnx.geometries.geometries_from_address"><code class="docutils literal notranslate"><span class="pre">ox.geometries_from_address</span></code></a>-funktiolla. Saamme tiedot kaikista rakennuksista lisäämällä funktion parametreihin <code class="docutils literal notranslate"><span class="pre">tags</span> <span class="pre">=</span> <span class="pre">{'building':</span> <span class="pre">True}</span></code>. Tämäkin funktio antaa rakennukset GeoDataFramena.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># eritellään kuvasta solmupisteet (nodes) ja reunat, eli tässä siis kadut (edges) omiksi muuttujikseen</span>
+<span class="n">nodes</span><span class="p">,</span> <span class="n">edges</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">graph_to_gdfs</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
+
+<span class="c1"># etsitään osoitteen avulla alueella olevat rakennukset käyttäen tagia &quot;building&quot;: True</span>
+<span class="n">buildings</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">geometries_from_address</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="n">distance</span><span class="p">,</span> <span class="n">tags</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;building&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span> <span class="p">)</span>
+
+<span class="c1"># GeoDataFramen sisältämiä sarakkeita voidaan tarkastella seuraavasti</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">buildings</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;unique_id&#39;, &#39;osmid&#39;, &#39;element_type&#39;, &#39;amenity&#39;, &#39;geometry&#39;,
+       &#39;addr:street&#39;, &#39;name&#39;, &#39;parking&#39;, &#39;wheelchair&#39;, &#39;entrance&#39;,
+       ...
+       &#39;building:min_level&#39;, &#39;brand&#39;, &#39;brand:wikipedia&#39;,
+       &#39;seamark:landmark:category&#39;, &#39;seamark:type&#39;, &#39;construction&#39;,
+       &#39;official_name&#39;, &#39;ways&#39;, &#39;type&#39;, &#39;historic:name&#39;],
+      dtype=&#39;object&#39;, length=124)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Huomataan, että rakennuksista on paljon erilaista tietoa (kolme pistettä keskellä viittaa siihen, että kaikki tiedot eivät mahdu näytölle), kuten niille määritelty nimi tai pääsy pyörätuolilla. Tässä harjoituksessa piirretään kartalle kuitenkin kaikki rakennukset, joten dataa ei tarvitse enempää manipuloida.</p>
+<p>Nyt voimme piirtää rakennukset ja kadut samaan kuvaan. Tätä varten tehdään kuvalle pohja <code class="docutils literal notranslate"><span class="pre">subplots()</span></code>-funktiolla. Tämä funktio antaa paluuarvoina itse kuvan sekä kuvan akselit, joita tarvitsemme, jotta saamme samalle akselille piirrettyä sekä rakennukset että tieverkoston.</p>
+<p>Lisäksi käytetään seuraavia funktioita:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.set_facecolor.html?highlight=set_facecolor#matplotlib.axes.Axes.set_facecolor"><code class="docutils literal notranslate"><span class="pre">ax.set_facecolor()</span></code></a> -&gt; asetetaan kuvaajaan taustaväri</p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.title.html?highlight=title#matplotlib.pyplot.title"><code class="docutils literal notranslate"><span class="pre">plt.title()</span></code></a> -&gt; asetetaan kuvaajalle otsikko</p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html?highlight=show#matplotlib.pyplot.show"><code class="docutils literal notranslate"><span class="pre">plt.show()</span></code></a> -&gt; näytetään ainoastaan kuva, eikä muuta koodisolun tietoa.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Jotta tiet ja rakennukset saadaan samaan kuvaan, tehdään kuvalle pohja:</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="mi">16</span><span class="p">))</span> <span class="c1"># Määritellään kuvan koko tuumina</span>
+
+<span class="c1"># Asetetaan taustaväriksi musta, jotta tiet ja rakennukset erottuvat paremmin</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="c1"># Asetetaan kuvalle otsikko</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Kadut ja rakennukset kilometrin etäisyydellä Tampereen keskustorista&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
+
+<span class="c1"># Piirretään tieverkosto, alpha-parametrilla säädetään värin läpinäkyvyyttä</span>
+<span class="c1"># Huom. akseliksi pitää määritellä ax</span>
+<span class="n">edges</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+<span class="c1"># Piirretään rakennukset</span>
+<span class="c1"># Huom. akseliksi pitää määritellä ax</span>
+
+<span class="n">buildings</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;silver&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span> 
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># Näytetään kuva show()-funktiolla</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/juha/anaconda3/envs/ox/lib/python3.9/site-packages/ipykernel/ipkernel.py:283: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
+  and should_run_async(code)
+</pre></div>
+</div>
+<img alt="../_images/openstreetmap_9_1.png" src="../_images/openstreetmap_9_1.png" />
+</div>
+</div>
+<p>Nyt olemme saaneet piirrettyä jo sekä tieverkoston, että rakennukset. Lisätään vielä puistot kuvaan. Ne löytyvät vapaa-aikaan viittaavalla tagilla “leisure”. Tällä tagilla löytyy kuitenkin muitakin paikkoja kuin puistoja, joten dataa pitää hieman karsia.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># etsitään osoitteen avulla alueella olevat vapaa-aikaan liittyvät paikkatiedot käyttäen tagia &quot;leisure&quot;: True</span>
+<span class="n">leisure</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">geometries_from_address</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="n">distance</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;leisure&quot;</span><span class="p">:</span><span class="kc">True</span><span class="p">})</span>
+
+<span class="c1"># katsotaan, mitä sarakkeita &quot;leisure&quot; pitää sisällään:</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">leisure</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/juha/anaconda3/envs/ox/lib/python3.9/site-packages/ipykernel/ipkernel.py:283: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
+  and should_run_async(code)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;unique_id&#39;, &#39;osmid&#39;, &#39;element_type&#39;, &#39;addr:city&#39;, &#39;addr:country&#39;,
+       &#39;addr:housenumber&#39;, &#39;addr:street&#39;, &#39;amenity&#39;, &#39;contact:website&#39;,
+       &#39;leisure&#39;, &#39;name&#39;, &#39;was:name&#39;, &#39;geometry&#39;, &#39;barrier&#39;, &#39;foot&#39;,
+       &#39;addr:postcode&#39;, &#39;opening_hours&#39;, &#39;sport&#39;, &#39;wheelchair&#39;, &#39;name:en&#39;,
+       &#39;name:fi&#39;, &#39;name:alt&#39;, &#39;phone&#39;, &#39;website&#39;, &#39;building&#39;, &#39;layer&#39;,
+       &#39;payment:bitcoin&#39;, &#39;email&#39;, &#39;level&#39;, &#39;addr:unit&#39;, &#39;alt_name&#39;, &#39;fee&#39;,
+       &#39;brand&#39;, &#39;nodes&#39;, &#39;loc_name&#39;, &#39;old_name&#39;, &#39;wikidata&#39;, &#39;name:sv&#39;,
+       &#39;wikipedia&#39;, &#39;name:it&#39;, &#39;source&#39;, &#39;note&#39;, &#39;surface&#39;, &#39;url&#39;, &#39;area&#39;,
+       &#39;lit&#39;, &#39;fence_type&#39;, &#39;access&#39;, &#39;fixme&#39;, &#39;official_name&#39;, &#39;ways&#39;, &#39;type&#39;,
+       &#39;lanes&#39;, &#39;bicycle&#39;, &#39;boundary&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vapaa-aikaan liittyvissä paikkatiedoissa on sarake nimeltä “leisure”. Katsotaan vielä mitä eri kohteita se pitää sisällään.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">leisure</span><span class="p">[</span><span class="s1">&#39;leisure&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;miniature_golf;escape_game;curling&#39; &#39;playground&#39; &#39;sports_centre&#39;
+ &#39;marina&#39; &#39;arena&#39; &#39;slipway&#39; &#39;fitness_station&#39; &#39;sauna&#39; &#39;pitch&#39; &#39;dance&#39;
+ &#39;fitness_centre&#39; &#39;amusement_arcade&#39; &#39;park&#39; &#39;stadium&#39; &#39;miniature_golf&#39;
+ &#39;dog_park&#39; &#39;*&#39; &#39;garden&#39; &#39;track&#39; &#39;nature_reserve&#39;]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/juha/anaconda3/envs/ox/lib/python3.9/site-packages/ipykernel/ipkernel.py:283: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
+  and should_run_async(code)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Voisimme etsiä paikkoja, kuten leikkikenttiä, saunoja tai huvipuistoja. Halusimme kuitenkin piirtää puistot kartalle. Niitä vastaavilla paikoilla sarakkeessa on sana ‘park’. Eritellään puistot muusta datasta ja tallennetaan ne muuttujaan “parks”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Valitaan kaikista vapaa-aikaan liittyvistä paikkatiedoista (leisure) sarake nimeltään leisure ja valitaan ne rivit, joissa tuo sarake on &#39;park&#39;</span>
+<span class="n">parks</span> <span class="o">=</span> <span class="n">leisure</span><span class="p">[</span><span class="n">leisure</span><span class="p">[</span><span class="s2">&quot;leisure&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;park&quot;</span><span class="p">])]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nyt voimme piirtää paikkatiedot näytölle samaan tapaan kuin aiemmin. Lisätään vielä kuvaajalle rajat, sillä puistot voivat ylettyä kilometriä kauemmas keskustorilta. Tämä onnistuu <a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.xlim.html?highlight=xlim#matplotlib.pyplot.xlim"><code class="docutils literal notranslate"><span class="pre">plt.xlim()</span></code></a>- ja <a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.ylim.html?highlight=ylim#matplotlib.pyplot.ylim"><code class="docutils literal notranslate"><span class="pre">plt.ylim()</span></code></a>-funktioilla.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="mi">16</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Kadut, rakennukset ja puistot kilometrin etäisyydellä Tampereen keskustorista&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
+
+<span class="n">edges</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="n">buildings</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;silver&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span> 
+
+<span class="c1"># Piirretään puistot</span>
+<span class="n">parks</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+<span class="c1"># Määritellään kuvalle rajat. Katsotaan sopivat rajat edellisestä kuvan akseleilta.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mf">23.742</span><span class="p">,</span> <span class="mf">23.782</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mf">61.489</span><span class="p">,</span> <span class="mf">61.507</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/openstreetmap_17_0.png" src="../_images/openstreetmap_17_0.png" />
+</div>
+</div>
+<p>Karttamme on nyt valmis. Sen avulla voimme tarkastella Tampereen keskustan katuverkostoa, rakennuksia ja puistoja. Kokeile itse tehdä oma karttasi jostain muusta paikasta tai lisää eri paikkatietoja tähän karttaan!</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./harjoitukset"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="maailmankartta.html" title="previous page">Datan esittäminen kartalla</a>
+    <a class='right-next' id="next-link" href="lyhimman_reitin_analyysi.html" title="next page">Lyhimmän reitin analyysi</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Juha Teuho<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
