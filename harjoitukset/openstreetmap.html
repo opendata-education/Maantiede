@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="fi">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,6 +43,7 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -52,15 +53,25 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://opendata-education.github.io/Maantiede/intro.html/harjoitukset/openstreetmap.html" />
     <link rel="shortcut icon" href="../_static/logo.png"/>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="index" title="Sisällysluettelo" href="../genindex.html" />
+    <link rel="search" title="Etsi" href="../search.html" />
     <link rel="next" title="Lyhimmän reitin analyysi" href="lyhimman_reitin_analyysi.html" />
     <link rel="prev" title="Datan esittäminen kartalla" href="maailmankartta.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
 
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://opendata-education.github.io/Maantiede/intro.html/harjoitukset/openstreetmap.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Open Street Map" />
+<meta property="og:description" content="Open Street Map  Open Street Map (OSM) on avoin karttapalvelu, jossa käyttäjät voivat itse osallistua karttojen luomiseen. Koska kyseessä on avoin projekti, sen" />
+<meta property="og:image"       content="https://opendata-education.github.io/Maantiede/intro.html/_static/logo.png" />
+
+<meta name="twitter:card" content="summary" />
 
 
   </head>
@@ -83,33 +94,36 @@
 </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Hae tästä kirjasta ..." aria-label="Hae tästä kirjasta ..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="../content.html">
-   Materiaali
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Tervetuloa avoimen datan pariin
   </a>
-  <ul class="current collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="maailmankartta.html">
-     Datan esittäminen kartalla
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Open Street Map
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="lyhimman_reitin_analyysi.html">
-     Lyhimmän reitin analyysi
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Harjoitukset
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="maailmankartta.html">
+   Datan esittäminen kartalla
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Open Street Map
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lyhimman_reitin_analyysi.html">
+   Lyhimmän reitin analyysi
+  </a>
  </li>
 </ul>
 
@@ -135,8 +149,8 @@
         
         <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
             data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            aria-expanded="true" aria-label="Vaihda navigointia" aria-controls="site-navigation"
+            title="Vaihda navigointia" data-toggle="tooltip" data-placement="left">
             <i class="fas fa-bars"></i>
             <i class="fas fa-arrow-left"></i>
             <i class="fas fa-arrow-up"></i>
@@ -144,7 +158,7 @@
         
         
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Lataa tämä sivu"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -152,10 +166,10 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../_sources/harjoitukset/openstreetmap.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Lataa lähdetiedosto" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Tulosta PDF-tiedostoon"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
@@ -168,12 +182,12 @@
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="https://github.com/opendata-education/Maantiede"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
+                data-toggle="tooltip" data-placement="left" title="Lähteen arkisto"><i
+                    class="fab fa-github"></i>arkisto</button></a>
         <a class="issues-button"
             href="https://github.com/opendata-education/Maantiede/issues/new?title=Issue%20on%20page%20%2Fharjoitukset/openstreetmap.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                title="Avaa ongelma"><i class="fas fa-lightbulb"></i>avoin ongelma</button></a>
         
     </div>
 </div>
@@ -181,8 +195,8 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Koko näytön tila"
+                title="Koko näytön tila"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -192,8 +206,8 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/opendata-education/Maantiede/main?urlpath=lab/tree/materiaali/harjoitukset/openstreetmap.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/opendata-education/Maantiede/main?urlpath=tree/materiaali/harjoitukset/openstreetmap.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Tuoda markkinoille Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
@@ -201,7 +215,7 @@
         
         
         <a class="colab-button" href="https://colab.research.google.com/github/opendata-education/Maantiede/blob/main/materiaali/harjoitukset/openstreetmap.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                title="Tuoda markkinoille Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
@@ -330,7 +344,7 @@
 <img alt="../_images/openstreetmap_9_1.png" src="../_images/openstreetmap_9_1.png" />
 </div>
 </div>
-<p>Nyt olemme saaneet piirrettyä jo sekä tieverkoston, että rakennukset. Lisätään vielä puistot kuvaan. Ne löytyvät vapaa-aikaan viittaavalla tagilla “leisure”. Tällä tagilla löytyy kuitenkin muitakin paikkoja kuin puistoja, joten dataa pitää hieman karsia.</p>
+<p>Nyt olemme saaneet piirrettyä jo sekä tieverkoston, että rakennukset. Lisätään vielä puistot kuvaan. Ne löytyvät vapaa-aikaan viittaavalla tagilla ”leisure”. Tällä tagilla löytyy kuitenkin muitakin paikkoja kuin puistoja, joten dataa pitää hieman karsia.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># etsitään osoitteen avulla alueella olevat vapaa-aikaan liittyvät paikkatiedot käyttäen tagia &quot;leisure&quot;: True</span>
@@ -361,7 +375,7 @@
 </div>
 </div>
 </div>
-<p>Vapaa-aikaan liittyvissä paikkatiedoissa on sarake nimeltä “leisure”. Katsotaan vielä mitä eri kohteita se pitää sisällään.</p>
+<p>Vapaa-aikaan liittyvissä paikkatiedoissa on sarake nimeltä ”leisure”. Katsotaan vielä mitä eri kohteita se pitää sisällään.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">leisure</span><span class="p">[</span><span class="s1">&#39;leisure&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
@@ -381,7 +395,7 @@
 </div>
 </div>
 </div>
-<p>Voisimme etsiä paikkoja, kuten leikkikenttiä, saunoja tai huvipuistoja. Halusimme kuitenkin piirtää puistot kartalle. Niitä vastaavilla paikoilla sarakkeessa on sana ‘park’. Eritellään puistot muusta datasta ja tallennetaan ne muuttujaan “parks”.</p>
+<p>Voisimme etsiä paikkoja, kuten leikkikenttiä, saunoja tai huvipuistoja. Halusimme kuitenkin piirtää puistot kartalle. Niitä vastaavilla paikoilla sarakkeessa on sana ’park’. Eritellään puistot muusta datasta ja tallennetaan ne muuttujaan ”parks”.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Valitaan kaikista vapaa-aikaan liittyvistä paikkatiedoista (leisure) sarake nimeltään leisure ja valitaan ne rivit, joissa tuo sarake on &#39;park&#39;</span>
@@ -459,7 +473,7 @@
         
           <div class="extra_footer">
             <div>
-<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> This book is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 License</a>.
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> Tämä materiaali on tuotettu ja käytettävissä CC-BY -lisenssin alla: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 License</a>.
 </div>
 
           </div>
