@@ -2,3 +2,8 @@ jupyter-book
 matplotlib
 numpy
 ghp-import
+pandas
+geopandas
+mapclassify
+descartes
+osmnx
