@@ -4,5 +4,6 @@
 - part: Harjoitukset
   chapters:
   - file: harjoitukset/maailmankartta
+  - file: harjoitukset/interaktiivinen_kartta
   - file: harjoitukset/openstreetmap
   - file: harjoitukset/lyhimman_reitin_analyysi
