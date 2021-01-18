@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="fi">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,7 +43,6 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -53,15 +52,25 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://opendata-education.github.io/Maantiede/intro.html/harjoitukset/interaktiivinen_kartta.html" />
     <link rel="shortcut icon" href="../_static/logo.png"/>
-    <link rel="index" title="Sisällysluettelo" href="../genindex.html" />
-    <link rel="search" title="Etsi" href="../search.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Open Street Map" href="openstreetmap.html" />
     <link rel="prev" title="Datan esittäminen kartalla" href="maailmankartta.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
 
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://opendata-education.github.io/Maantiede/intro.html/harjoitukset/interaktiivinen_kartta.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Interaktiiviset kartat" />
+<meta property="og:description" content="Interaktiiviset kartat  Edellisessä esimerkissä piirsimme kartan, joka antoi nopeasti hyvän kokonaiskuvan maailman hiilidioksidipäästöistä. Kartalla valtiot oli" />
+<meta property="og:image"       content="https://opendata-education.github.io/Maantiede/intro.html/_static/logo.png" />
+
+<meta name="twitter:card" content="summary" />
 
 
   </head>
@@ -84,7 +93,7 @@
 </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Hae tästä kirjasta ..." aria-label="Hae tästä kirjasta ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="nav sidenav_l1">
@@ -144,8 +153,8 @@
         
         <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
             data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Vaihda navigointia" aria-controls="site-navigation"
-            title="Vaihda navigointia" data-toggle="tooltip" data-placement="left">
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
             <i class="fas fa-bars"></i>
             <i class="fas fa-arrow-left"></i>
             <i class="fas fa-arrow-up"></i>
@@ -153,7 +162,7 @@
         
         
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Lataa tämä sivu"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -161,10 +170,10 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../_sources/harjoitukset/interaktiivinen_kartta.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Lataa lähdetiedosto" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Tulosta PDF-tiedostoon"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
@@ -177,12 +186,12 @@
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="https://github.com/opendata-education/Maantiede"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Lähteen arkisto"><i
-                    class="fab fa-github"></i>arkisto</button></a>
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
             href="https://github.com/opendata-education/Maantiede/issues/new?title=Issue%20on%20page%20%2Fharjoitukset/interaktiivinen_kartta.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Avaa ongelma"><i class="fas fa-lightbulb"></i>avoin ongelma</button></a>
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
     </div>
 </div>
@@ -190,8 +199,8 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Koko näytön tila"
-                title="Koko näytön tila"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -202,7 +211,7 @@
     <div class="dropdown-buttons">
         
         <a class="binder-button" href="https://mybinder.org/v2/gh/opendata-education/Maantiede/main?urlpath=tree/materiaali/harjoitukset/interaktiivinen_kartta.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Tuoda markkinoille Binder" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
@@ -210,7 +219,7 @@
         
         
         <a class="colab-button" href="https://colab.research.google.com/github/opendata-education/Maantiede/blob/main/materiaali/harjoitukset/interaktiivinen_kartta.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Tuoda markkinoille Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
@@ -224,7 +233,7 @@
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Sisällys
+            <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
@@ -253,8 +262,8 @@
 <h1>Interaktiiviset kartat<a class="headerlink" href="#interaktiiviset-kartat" title="Permalink to this headline">¶</a></h1>
 <p>Edellisessä esimerkissä piirsimme kartan, joka antoi nopeasti hyvän kokonaiskuvan maailman hiilidioksidipäästöistä. Kartalla valtiot oli väritetty siten, että mitä tummempi väri, sitä suuremmat päästöt valtiolla oli. Mitä, jos haluaisimmekin tietää tarkalleen tietyn valtion päästöt?</p>
 <p>Tässä harjoituksessa tarkoituksena on tehdä samantyylinen kartta, mutta lisätään siihen interaktiivisia ominaisuuksia. Tehdään sellainen kartta, jossa näytölle ilmestyy alueen tietoja, kun hiirellä liikutaan alueen päälle. Käytetään vaihtelun vuoksi eri esimerkkidataa kuin viime kerralla. Piirretään tällä kertaa Suomen kunnat ja niissä asuvien eläkeläisten osuus väestöstä.</p>
-<p>Suomen karttaa varten tarvittavat kuntarajat saadaan ladattua <a class="reference external" href="https://tiedostopalvelu.maanmittauslaitos.fi/tp/kartta">Maanmittauslaitoksen tiedostopalvelusta</a>. Tiedosto löytyy datakansiosta nimellä ”SuomenKuntajako_2020_250k.mid”.</p>
-<p>Eläkeläisten osuus kuntien väestöstä on myös avointa dataa ja saatavilla <a class="reference external" href="https://pxnet2.stat.fi/PXWeb/pxweb/fi/Kuntien_avainluvut/">Tilastokeskuksen palvelusta</a>. Tämäkin tiedosto on valmiiksi ladattu ja hieman siistitty paremmin tätä esimerkkiä sopivaksi. Se löytyy datakansiosta nimellä ”elakelaisten_osuus_2018_kuntajako_2020.csv”. Nimi viittaa siihen, että kyseessä on eläkeläisten osuus väestöstä vuodelta 2018, mutta vuoden 2020 kuntajaolla.</p>
+<p>Suomen karttaa varten tarvittavat kuntarajat saadaan ladattua <a class="reference external" href="https://tiedostopalvelu.maanmittauslaitos.fi/tp/kartta">Maanmittauslaitoksen tiedostopalvelusta</a>. Tiedosto löytyy datakansiosta nimellä “SuomenKuntajako_2020_250k.mid”.</p>
+<p>Eläkeläisten osuus kuntien väestöstä on myös avointa dataa ja saatavilla <a class="reference external" href="https://pxnet2.stat.fi/PXWeb/pxweb/fi/Kuntien_avainluvut/">Tilastokeskuksen palvelusta</a>. Tämäkin tiedosto on valmiiksi ladattu ja hieman siistitty paremmin tätä esimerkkiä sopivaksi. Se löytyy datakansiosta nimellä “elakelaisten_osuus_2018_kuntajako_2020.csv”. Nimi viittaa siihen, että kyseessä on eläkeläisten osuus väestöstä vuodelta 2018, mutta vuoden 2020 kuntajaolla.</p>
 <div class="section" id="datan-lukeminen">
 <h2>Datan lukeminen<a class="headerlink" href="#datan-lukeminen" title="Permalink to this headline">¶</a></h2>
 <p>Aloitetaan harjoitus samoin, kuten aiemmin, eli lataamalla datatiedostot ja yhdistämällä ne yhdeksi datasetiksi. Käytämme jälleen <a class="reference external" href="https://pandas.pydata.org/">pandas</a> ja <a class="reference external" href="https://geopandas.org/">geopandas</a> -kirjastoja tähän.</p>
@@ -556,7 +565,7 @@
 <h2>Kartan piirtäminen Bokeh-kirjaston avulla<a class="headerlink" href="#kartan-piirtaminen-bokeh-kirjaston-avulla" title="Permalink to this headline">¶</a></h2>
 <p>Hienoa, datan lukeminen onnistui! Piirretään seuraavaksi tiedot näytölle <a class="reference external" href="https://bokeh.org/">Bokeh</a>-kirjaston avulla. Kuvan piirtämiseksi tarvitsemme seuraavia funktioita tai luokkia:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://docs.bokeh.org/en/latest/docs/reference/plotting.html#bokeh.plotting.figure"><code class="docutils literal notranslate"><span class="pre">figure()</span></code></a>: Alustetaan kuva. Voidaan antaa esim. kuvan otsikko tässä vaiheessa ”title”-parametrilla.</p></li>
+<li><p><a class="reference external" href="https://docs.bokeh.org/en/latest/docs/reference/plotting.html#bokeh.plotting.figure"><code class="docutils literal notranslate"><span class="pre">figure()</span></code></a>: Alustetaan kuva. Voidaan antaa esim. kuvan otsikko tässä vaiheessa “title”-parametrilla.</p></li>
 <li><p><a class="reference external" href="https://docs.bokeh.org/en/latest/docs/reference/models/sources.html#bokeh.models.sources.GeoJSONDataSource"><code class="docutils literal notranslate"><span class="pre">GeoJSONDataSource</span></code></a>: Muutetaan datamme GeoJSONDataSource-muotoiseksi, jotta sen piirtäminen bokeh:lla onnistuu helposti.</p></li>
 <li><p><a class="reference external" href="https://docs.bokeh.org/en/latest/docs/reference/models/mappers.html#bokeh.models.mappers.LinearColorMapper"><code class="docutils literal notranslate"><span class="pre">LinearColorMapper</span></code></a>: Lisätään värit karttaan.</p></li>
 <li><p><a class="reference external" href="https://docs.bokeh.org/en/latest/docs/reference/palettes.html#brewer-palettes"><code class="docutils literal notranslate"><span class="pre">Greens</span></code></a>: Käytetään vihreää värikarttaa.</p></li>
@@ -1294,7 +1303,7 @@
 })(window);</script></div>
 </div>
 <p>Loistavaa! Voimme nyt poimia kartastamme kuntia hiirellä ja nähdä, mikä on eläkeläisten osuus väestöstä kyseisissä kunnissa! Eikä siihen mennyt montaakaan koodiriviä.</p>
-<p>Kokeile itse hakea jokin muu kuntakohtainen data, piirtää se kartalle ja lisätä vielä interaktiivinen ”hover”-työkalu. Voit myös yrittää etsiä jotain muuta, kuten valtiokohtaista dataa tai jotakin muuta, kunhan löydät sopivan tiedoston, joka sisältää alueiden rajat.</p>
+<p>Kokeile itse hakea jokin muu kuntakohtainen data, piirtää se kartalle ja lisätä vielä interaktiivinen “hover”-työkalu. Voit myös yrittää etsiä jotain muuta, kuten valtiokohtaista dataa tai jotakin muuta, kunhan löydät sopivan tiedoston, joka sisältää alueiden rajat.</p>
 </div>
 </div>
 
@@ -1339,7 +1348,7 @@
           <div class="extra_footer">
             <div>
 <a>Toteutettu Opetushallituksen valtionavustuksella tiedekasvatuksen edistämiseen.</a></br><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> Tämän sivuston materiaali on käytettävissä seuraavalla lisenssillä: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY 4.0.</a>
-</div>
+</div>    
 
           </div>
       </p>
