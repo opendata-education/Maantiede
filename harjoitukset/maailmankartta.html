@@ -232,6 +232,25 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#datan-hankinta-ja-lataaminen">
+   Datan hankinta ja lataaminen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#datan-visualisoiminen">
+   Datan visualisoiminen
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -243,11 +262,11 @@
 <h1>Datan esittäminen kartalla<a class="headerlink" href="#datan-esittaminen-kartalla" title="Permalink to this headline">¶</a></h1>
 <p>Tässä harjoituksessa tarkoituksena on esittää maailman valtioiden vuotuiset hiilidioksidipäästöt henkilöä kohden kartan muodossa. Data voitaisiin esittää monin eri tavoin, kuten vaikkapa taulukossa, josta voisi suhteellisen helposti etsiä tietty valtion ja sen hiilidioksidipäästöt. Jos tavoitteenamme on kuitenkin saada kokonaiskuva kaikkien valtioiden päästöistä, on datan esittäminen kartalla oiva valinta. Piirrämme siis maailmankartan, ja väritämme valtiot sitä tummemmaksi, mitä suuremmat hiilidioksidipäästöt niillä on.</p>
 <p>Tässä esimerkissä käytetty data on peräisin <a class="reference external" href="https://databank.worldbank.org/home">Maailmanpankin sivustolla</a>, josta on saatavilla paljon muutakin mielenkiintoista dataa.</p>
-<p>Aloitetaan hankkimalla haluamamme data. Tätä esimerkkiä varten tiedostot ovat valmiiksi ladattuina ja löytyvät kansiosta ‘data’.</p>
-<p>Valtioiden geometriset muodot, joita piirtämiseen tarvitaan voidaan lukea .shp-päätteisestä tiedostosta.
-GeoPandas-kirjastossa on valmiina käytettävissä valtioiden geometriset muodot, mutta halutessaan niistä voi ladata korkeampiresoluutioisen version esimerkiksi osoitteesta <a class="reference external" href="https://www.naturalearthdata.com/downloads/">https://www.naturalearthdata.com/downloads/</a>. Netistä löytyy myös muita .shp-tiedostoja, jotka voivat sisältää esimerkiksi Suomen kunnat.</p>
-<p>Hiilidioksidipäästödata on peräisin osoitteesta <a class="reference external" href="https://databank.worldbank.org/source/world-development-indicators">https://databank.worldbank.org/source/world-development-indicators#</a>.</p>
-<p>Datatiedostojen lukemiseen käytetään yleensä ‘Pandas’-kirjastoa. Geodatan (valtioiden muodot) lukemiseen käytetään kuitenkin ‘GeoPandas’-nimistä kirjastoa. Aloitetaan datan tutkiminen tuomalla tarvittavat kirjastot.</p>
+<div class="section" id="datan-hankinta-ja-lataaminen">
+<h2>Datan hankinta ja lataaminen<a class="headerlink" href="#datan-hankinta-ja-lataaminen" title="Permalink to this headline">¶</a></h2>
+<p>Aloitetaan hankkimalla haluamamme data. Tätä esimerkkiä varten tarvittava tiedosto on valmiiksi ladattu ja löytyy kansiosta ‘data’ nimellä ‘CO2-emissions-per-capita-2014.csv’. Hiilidioksidipäästödata on peräisin osoitteesta <a class="reference external" href="https://databank.worldbank.org/source/world-development-indicators">https://databank.worldbank.org/source/world-development-indicators#</a>.</p>
+<p>Valtioiden rajat, joita piirtämiseen tarvitaan voitaisiin lukea vektorimuotoisena .shp-päätteisestä tiedostosta. Nämä tiedot löytyvät kuitenkin valmiina <a class="reference external" href="https://geopandas.org/">GeoPandas</a>-kirjastossa. Halutessaan valtioiden rajoista voi ladata korkeampiresoluutioisen version esimerkiksi osoitteesta <a class="reference external" href="https://www.naturalearthdata.com/downloads/">https://www.naturalearthdata.com/downloads/</a>. Netistä löytyy myös muita .shp-tiedostoja, jotka voivat sisältää esimerkiksi Suomen kunnat.</p>
+<p>Datatiedostojen lukemiseen käytetään yleensä <a class="reference external" href="https://pandas.pydata.org/">Pandas</a>-kirjastoa. Geodatan (valtioiden rajat .shp-tiedostona) lukemiseen käytetään kuitenkin GeoPandasia. Aloitetaan datan tutkiminen tuomalla tarvittavat kirjastot. Datan visualisointia varten tarvitaan <a class="reference external" href="https://matplotlib.org/">matplotlib</a>-kirjastoa.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>             <span class="c1"># Pandas-kirjastolla luetaan ja käsitellään dataa</span>
@@ -257,12 +276,11 @@ GeoPandas-kirjastossa on valmiina käytettävissä valtioiden geometriset muodot
 </div>
 </div>
 </div>
-<p>GeoPandas sisältää valmiiksi muutamia geometrisia tietoja, joista yksi on valtioiden muodot.
+<p>GeoPandas sisältää valmiiksi muutamia geometrisia tietoja, joista yksi on valtioiden rajat.
 Luetaan kyseinen data ja katsotaan, mitä se sisältää.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Luetaan geometrinen data valtioille ja tallennetaan tiedot muuttujaan &#39;world&#39;</span>
-<span class="c1">#world = gpd.read_file(&#39;data/countries/countries.shp&#39;)</span>
 <span class="n">world</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">gpd</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="s1">&#39;naturalearth_lowres&#39;</span><span class="p">))</span>
 
 <span class="c1"># Tulostetaan muutama ensimmäinen rivi datasta</span>
@@ -288,19 +306,7 @@ Luetaan kyseinen data ja katsotaan, mitä se sisältää.</p>
 </div>
 </div>
 </div>
-<p>Katsotaan datan sisältämät sarakkeet.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">world</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;pop_est&#39;, &#39;continent&#39;, &#39;name&#39;, &#39;iso_a3&#39;, &#39;gdp_md_est&#39;, &#39;geometry&#39;], dtype=&#39;object&#39;)
-</pre></div>
-</div>
-</div>
-</div>
+<p>Kuten nähdään, tiedosto sisältää useita sarakkeita, joista meidän kannaltamme tärkeimmät ovat “name”, joka kertoo valtion nimen ja “geometry”, joka sisältää valtion rajojen tiedot.</p>
 <p>Voimme piirtää geopandasilla lukemamme datan suoraan käyttämällä ‘plot’-käskyä</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -309,13 +315,14 @@ Luetaan kyseinen data ja katsotaan, mitä se sisältää.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fe69aa0f3a0&gt;
 </pre></div>
 </div>
 <img alt="../_images/maailmankartta_10_1.png" src="../_images/maailmankartta_10_1.png" />
 </div>
 </div>
-<p>Luetaan seuraavaksi hiilidioksidipäästödata ja katsotaan, mitä se pitää sisällään.</p>
+<p>Datasta hahmottuu selkeästi maailmankartta. Seuraavaksi pitäisi vielä saada valtiot väritettyä hiilidioksidipäästöjen mukaisesti.</p>
+<p>Luetaan hiilidioksidipäästödata ja katsotaan, mitä se pitää sisällään.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Luetaan CO2-päästöjen data ja tallennetaan se muuttujaan &#39;CO2_2014&#39;.</span>
@@ -360,7 +367,10 @@ Luetaan kyseinen data ja katsotaan, mitä se sisältää.</p>
 </div>
 </div>
 </div>
-<p>Nyt kun data on yhdistetty, voimme piirtää sen.</p>
+</div>
+<div class="section" id="datan-visualisoiminen">
+<h2>Datan visualisoiminen<a class="headerlink" href="#datan-visualisoiminen" title="Permalink to this headline">¶</a></h2>
+<p>Nyt kun data on yhdistetty, voimme piirtää sen plot-funktiolla. Parametreiksi plot-funktiolle annamme sen sarakkeen nimen, jonka mukaan haluamme valtiot värittää, kuvan koon sekä värikartan (‘Greens’).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;2014 [YR2014]&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">20</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Greens&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span> <span class="c1"># 6 eri väriä</span>
@@ -368,10 +378,10 @@ Luetaan kyseinen data ja katsotaan, mitä se sisältää.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fe698103940&gt;
 </pre></div>
 </div>
-<img alt="../_images/maailmankartta_16_1.png" src="../_images/maailmankartta_16_1.png" />
+<img alt="../_images/maailmankartta_17_1.png" src="../_images/maailmankartta_17_1.png" />
 </div>
 </div>
 <p>Nyt näemme jo, että eri valtioiden päästöt ovat erilaiset. Kuvasta on kuitenkin vaikea hahmottaa, minkä valtioden päästöt ovat suurimpia.</p>
@@ -411,11 +421,12 @@ Luetaan kyseinen data ja katsotaan, mitä se sisältää.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/maailmankartta_18_0.png" src="../_images/maailmankartta_18_0.png" />
+<img alt="../_images/maailmankartta_19_0.png" src="../_images/maailmankartta_19_0.png" />
 </div>
 </div>
 <p>Nyt kartasta erottaa jo huomattavasti paremmin eri alueet ja niitä vastaavat hiilidioksidipäästöt. Voit kokeilla piirtää datan myös jakamalla datan useampaan tai vähempään kuin kuuteen osaan. Miltä data tällöin näyttää? Muokkaa kuvaa haluamallasi tavalla.</p>
 <p>Etsi itse jokin toinen valtiokohtainen data ja piirrä se samaan tapaan. Valtiokohtaista dataa löytää googlaamalla tai esimerkiksi osoitteesta <a class="reference external" href="https://databank.worldbank.org/source/world-development-indicators">https://databank.worldbank.org/source/world-development-indicators#</a>. Maailmanpankin sivuilta pystyy myös tarkastelemaan dataa kartalla, mutta kokeile piirtää se itse!</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
