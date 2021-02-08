@@ -1,0 +1,890 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lämpötila ja sademäärä &#8212; Maantiede</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://opendata-education.github.io/Maantiede/intro.html/harjoitukset/lampotila_sademaara.html" />
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Open Street Map" href="openstreetmap.html" />
+    <link rel="prev" title="Interaktiiviset kartat" href="interaktiivinen_kartta.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://opendata-education.github.io/Maantiede/intro.html/harjoitukset/lampotila_sademaara.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Lämpötila ja sademäärä" />
+<meta property="og:description" content="Lämpötila ja sademäärä  Tehtävä  Etsi oman kotipaikkakuntasi (tai jonkin muun paikkakunnan) kuukausien keskilämpötilat ja sademäärät ainakin kymmenen viime vuod" />
+<meta property="og:image"       content="https://opendata-education.github.io/Maantiede/intro.html/_static/logo.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Maantiede</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Tervetuloa avoimen datan pariin
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Harjoitukset
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="maailmankartta.html">
+   Datan esittäminen kartalla
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="interaktiivinen_kartta.html">
+   Interaktiiviset kartat
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lämpötila ja sademäärä
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="openstreetmap.html">
+   Open Street Map
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lyhimman_reitin_analyysi.html">
+   Lyhimmän reitin analyysi
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/harjoitukset/lampotila_sademaara.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/opendata-education/Maantiede"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/opendata-education/Maantiede/issues/new?title=Issue%20on%20page%20%2Fharjoitukset/lampotila_sademaara.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/opendata-education/Maantiede/main?urlpath=tree/materiaali/harjoitukset/lampotila_sademaara.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tehtava">
+   Tehtävä
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#esimerkki">
+   Esimerkki
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="lampotila-ja-sademaara">
+<h1>Lämpötila ja sademäärä<a class="headerlink" href="#lampotila-ja-sademaara" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tehtava">
+<h2>Tehtävä<a class="headerlink" href="#tehtava" title="Permalink to this headline">¶</a></h2>
+<p>Etsi oman kotipaikkakuntasi (tai jonkin muun paikkakunnan) kuukausien keskilämpötilat ja sademäärät ainakin kymmenen viime vuoden ajalta (voit valita myös koko mittaushistorian). Laske vuosien keskilämpötilat ja sademäärät ja piirrä niistä kuvaaja. Mikä vuosi on ollut kaikkein lämpimin? Entä kylmin? Milloin puolestaan on satanut eniten tai vähiten? Voit ottaa mallia esimerkistä.</p>
+</div>
+<div class="section" id="esimerkki">
+<h2>Esimerkki<a class="headerlink" href="#esimerkki" title="Permalink to this headline">¶</a></h2>
+<p>Haetaan ilmatieteenlaitoksen hakupalvelusta tiedot Pirkkalan lentoaseman säähavainnoista (kuukauden keskilämpötila ja -sademäärä). Mittaushistoria ulottuu noin 80-luvulle, joten valitaan aikaväliski 1980-2020. Havainnot on ladattu hakupalvelusta ja tallennettu tiedostoon “pirkkala_1980-2020.csv”.</p>
+<p>Käytetään datan lukemiseen ja käsittelemiseen <span class="xref myst">pandas</span>-pakettia ja datan visualisoimiseen <a class="reference external" href="https://matplotlib.org/">matplotlib</a>-pakettia.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tuodaan tarvittavat paketit</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Luetaan data ja katsotaan ensimmäisten rivien sisältö.</span>
+<span class="c1"># Data sijaitsee data kansiossa, joka on yhden kansion alempana nykyisestä kansiosta.</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/pirkkala_1980-2020.csv&#39;</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Vuosi</th>
+      <th>Kk</th>
+      <th>Pv</th>
+      <th>Klo</th>
+      <th>Aikavyöhyke</th>
+      <th>Kuukauden sadesumma (mm)</th>
+      <th>Kuukauden keskilämpötila (degC)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1980</td>
+      <td>1</td>
+      <td>1</td>
+      <td>00:00</td>
+      <td>UTC</td>
+      <td>15.4</td>
+      <td>-9.5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1980</td>
+      <td>2</td>
+      <td>1</td>
+      <td>00:00</td>
+      <td>UTC</td>
+      <td>8.2</td>
+      <td>-10.1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1980</td>
+      <td>3</td>
+      <td>1</td>
+      <td>00:00</td>
+      <td>UTC</td>
+      <td>5.2</td>
+      <td>-6.5</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1980</td>
+      <td>4</td>
+      <td>1</td>
+      <td>00:00</td>
+      <td>UTC</td>
+      <td>19.7</td>
+      <td>4.2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1980</td>
+      <td>5</td>
+      <td>1</td>
+      <td>00:00</td>
+      <td>UTC</td>
+      <td>22.9</td>
+      <td>7.3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Nähdään, että sademäärät löytyvät sarakkeesta “Kuukauden sadesumma (mm)” ja lämpötilat sarakkeesta “Kuukauden keskilämpötila (degC)”. Seuraavaksi meidän tulee ryhmitellä data vuosien perusteella, jotta voimme vertailla dataa vuositasolla. Ryhmittely voidaan tehdä <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.groupby.html"><code class="docutils literal notranslate"><span class="pre">groupby()</span></code></a>-funktiolla.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ryhmitellään data &quot;Vuosi&quot;-sarakkeen perusteella.</span>
+
+<span class="n">data_groups</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Vuosi&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vuositilastojen keskiarvot saadaan <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.core.groupby.GroupBy.mean.html"><code class="docutils literal notranslate"><span class="pre">mean()</span></code></a>-funktiolla.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Katsotaan, miltä keskiarvotilastot näyttävät</span>
+
+<span class="n">avg</span> <span class="o">=</span> <span class="n">data_groups</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">avg</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Kk</th>
+      <th>Pv</th>
+      <th>Kuukauden sadesumma (mm)</th>
+      <th>Kuukauden keskilämpötila (degC)</th>
+    </tr>
+    <tr>
+      <th>Vuosi</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1980</th>
+      <td>6.5</td>
+      <td>1.0</td>
+      <td>43.866667</td>
+      <td>3.308333</td>
+    </tr>
+    <tr>
+      <th>1981</th>
+      <td>6.5</td>
+      <td>1.0</td>
+      <td>67.708333</td>
+      <td>3.316667</td>
+    </tr>
+    <tr>
+      <th>1982</th>
+      <td>6.5</td>
+      <td>1.0</td>
+      <td>47.275000</td>
+      <td>4.041667</td>
+    </tr>
+    <tr>
+      <th>1983</th>
+      <td>6.5</td>
+      <td>1.0</td>
+      <td>51.150000</td>
+      <td>4.425000</td>
+    </tr>
+    <tr>
+      <th>1984</th>
+      <td>6.5</td>
+      <td>1.0</td>
+      <td>51.841667</td>
+      <td>4.600000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Tallennetaan keskiarvot omiin muuttujiin. Vuosiluvut saadaan data-ryhmistä <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.core.groupby.GroupBy.groups.html">groups</a>-komennolla, josta saamme ryhmät ja niitä vastaavien rivien indeksit. Koska haluamme ainoastaan vuosiluvut (eli ryhmien nimet), käytämme vielä <code class="docutils literal notranslate"><span class="pre">keys()</span></code>-funktiota, joka antaa ainoastaan ryhmien nimet.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tallennetaan vuosien keskilämpötilat ja -sademäärät sekä vuosiluvut omiin muuttujiin.</span>
+
+<span class="n">rain</span> <span class="o">=</span> <span class="n">avg</span><span class="p">[</span><span class="s1">&#39;Kuukauden sadesumma (mm)&#39;</span><span class="p">]</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">avg</span><span class="p">[</span><span class="s1">&#39;Kuukauden keskilämpötila (degC)&#39;</span><span class="p">]</span>
+<span class="n">year</span> <span class="o">=</span> <span class="n">data_groups</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nyt kun data on käsitelty, voimme piirtää kuvaajan. Piirretään sademäärä pylväinä ja lämpötila viivana. Käytetään matplotlib-paketista seuraavia funktioita:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://matplotlib.org/3.3.3/api/_as_gen/matplotlib.pyplot.subplots.html"><code class="docutils literal notranslate"><span class="pre">subplots()</span></code></a> Kuvaajan alustus</p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.plot.html"><code class="docutils literal notranslate"><span class="pre">plot(x,y)</span></code></a> Piirretään y x:n funktiona</p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.axes.Axes.bar.html"><code class="docutils literal notranslate"><span class="pre">bar(x,y)</span></code></a> Pylväsdiagrammi</p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.axes.Axes.twinx.html"><code class="docutils literal notranslate"><span class="pre">twinx()</span></code></a> Luodaan toinen akselisto, jossa on sama x-akseli</p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.axes.Axes.set_xlabel.html"><code class="docutils literal notranslate"><span class="pre">set_xlabel('title')</span></code></a> Asetetaan tiettyyn akselistoon x-akselin otsikko</p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/3.3.3/api/_as_gen/matplotlib.axes.Axes.set_ylabel.html"><code class="docutils literal notranslate"><span class="pre">set_ylabel('title')</span></code></a> Asetetaan tiettyyn akselistoon y-akselin otsikko</p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.title.html"><code class="docutils literal notranslate"><span class="pre">title('title')</span></code></a> Otsikko</p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.show.html"><code class="docutils literal notranslate"><span class="pre">show()</span></code></a> Kuvaajan näyttäminen</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kuvaajan piirtäminen</span>
+
+<span class="c1"># Alustetaan kuvaaja subplots-komennolla. Tällöin voimme luoda myöhemmin toisen y-akselin kuvaajaan.</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># Piirretään lämpötilat</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">year</span><span class="p">,</span><span class="n">temp</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+<span class="c1"># Luodaan toinen y-akseli sademääriä varten</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+
+<span class="c1"># Piirretään sademäärät pylväinä</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">year</span><span class="p">,</span><span class="n">rain</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+<span class="c1"># Asetetaan akselien otsikot</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Vuosi&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Lämpötila (degC)&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Sademäärä (mm)&#39;</span><span class="p">)</span>
+
+<span class="c1"># Kuvaajan otsikko</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Vuosien keskilämpötilat ja -sademäärät Pirkkalan lentoasemalla&#39;</span><span class="p">)</span>
+
+<span class="c1"># Näytetään kuvaaja</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lampotila_sademaara_14_0.png" src="../_images/lampotila_sademaara_14_0.png" />
+</div>
+</div>
+<p>Kuvaajasta huomataan, että sademäärätiedot puuttuvat vuoden 2006 jälkeen. Tarkistetaan vielä <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.core.groupby.GroupBy.get_group.html"><code class="docutils literal notranslate"><span class="pre">get_group</span></code></a>-funktion avulla, miltä vuoden 2006 tilastot näyttävät:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_groups</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="mi">2006</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Vuosi</th>
+      <th>Kk</th>
+      <th>Pv</th>
+      <th>Klo</th>
+      <th>Aikavyöhyke</th>
+      <th>Kuukauden sadesumma (mm)</th>
+      <th>Kuukauden keskilämpötila (degC)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>312</th>
+      <td>2006</td>
+      <td>1</td>
+      <td>1</td>
+      <td>00:00</td>
+      <td>UTC</td>
+      <td>17.3</td>
+      <td>-5.5</td>
+    </tr>
+    <tr>
+      <th>313</th>
+      <td>2006</td>
+      <td>2</td>
+      <td>1</td>
+      <td>00:00</td>
+      <td>UTC</td>
+      <td>17.5</td>
+      <td>-9.6</td>
+    </tr>
+    <tr>
+      <th>314</th>
+      <td>2006</td>
+      <td>3</td>
+      <td>1</td>
+      <td>00:00</td>
+      <td>UTC</td>
+      <td>30.7</td>
+      <td>-7.9</td>
+    </tr>
+    <tr>
+      <th>315</th>
+      <td>2006</td>
+      <td>4</td>
+      <td>1</td>
+      <td>00:00</td>
+      <td>UTC</td>
+      <td>33.6</td>
+      <td>3.4</td>
+    </tr>
+    <tr>
+      <th>316</th>
+      <td>2006</td>
+      <td>5</td>
+      <td>1</td>
+      <td>00:00</td>
+      <td>UTC</td>
+      <td>36.2</td>
+      <td>9.9</td>
+    </tr>
+    <tr>
+      <th>317</th>
+      <td>2006</td>
+      <td>6</td>
+      <td>1</td>
+      <td>00:00</td>
+      <td>UTC</td>
+      <td>20.9</td>
+      <td>15.2</td>
+    </tr>
+    <tr>
+      <th>318</th>
+      <td>2006</td>
+      <td>7</td>
+      <td>1</td>
+      <td>00:00</td>
+      <td>UTC</td>
+      <td>NaN</td>
+      <td>17.9</td>
+    </tr>
+    <tr>
+      <th>319</th>
+      <td>2006</td>
+      <td>8</td>
+      <td>1</td>
+      <td>00:00</td>
+      <td>UTC</td>
+      <td>NaN</td>
+      <td>17.9</td>
+    </tr>
+    <tr>
+      <th>320</th>
+      <td>2006</td>
+      <td>9</td>
+      <td>1</td>
+      <td>00:00</td>
+      <td>UTC</td>
+      <td>NaN</td>
+      <td>12.7</td>
+    </tr>
+    <tr>
+      <th>321</th>
+      <td>2006</td>
+      <td>10</td>
+      <td>1</td>
+      <td>00:00</td>
+      <td>UTC</td>
+      <td>NaN</td>
+      <td>6.2</td>
+    </tr>
+    <tr>
+      <th>322</th>
+      <td>2006</td>
+      <td>11</td>
+      <td>1</td>
+      <td>00:00</td>
+      <td>UTC</td>
+      <td>NaN</td>
+      <td>0.8</td>
+    </tr>
+    <tr>
+      <th>323</th>
+      <td>2006</td>
+      <td>12</td>
+      <td>1</td>
+      <td>00:00</td>
+      <td>UTC</td>
+      <td>NaN</td>
+      <td>2.2</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Huomataan, että sademäärien mittaaminen on keskeytetty kesken vuoden 2006. Niimpä meidän täytyy jättää myös vuosi 2006 pois vuositilastoistamme. Korvataan vuoden 2006 arvo NaN (Not a Number) arvolla, joka tarkoittaa, että arvoa ei ole olemassa. Tämä voidaan tehdä <a class="reference external" href="https://numpy.org/">numpy</a>-paketin <a class="reference external" href="https://numpy.org/doc/stable/reference/constants.html#numpy.nan"><code class="docutils literal notranslate"><span class="pre">nan</span></code></a>-arvolla.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Poistetaan vuosi 2006 rain-taulukosta</span>
+<span class="c1"># Korvataan arvo numpy-paketin NaN-arvolla, joka tarkoittaa, että arvoa ei ole olemassa.</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">rain</span><span class="p">[</span><span class="mi">2006</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+<span class="n">rain</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vuosi
+1980    43.866667
+1981    67.708333
+1982    47.275000
+1983    51.150000
+1984    51.841667
+1985    48.183333
+1986    53.908333
+1987    48.833333
+1988    72.958333
+1989    42.900000
+1990    48.425000
+1991    51.091667
+1992    49.666667
+1993    37.700000
+1994    45.791667
+1995    49.508333
+1996    41.641667
+1997    47.716667
+1998    51.375000
+1999    48.666667
+2000    50.700000
+2001    57.633333
+2002    41.691667
+2003    42.025000
+2004    57.550000
+2005    48.983333
+2006          NaN
+2007          NaN
+2008          NaN
+2009          NaN
+2010          NaN
+2011          NaN
+2012          NaN
+2013          NaN
+2014          NaN
+2015          NaN
+2016          NaN
+2017          NaN
+2018          NaN
+2019          NaN
+2020          NaN
+Name: Kuukauden sadesumma (mm), dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Piirretään kuvaaja uudelleen</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">year</span><span class="p">,</span><span class="n">temp</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">year</span><span class="p">,</span><span class="n">rain</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Vuosi&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Lämpötila (degC)&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Sademäärä (mm)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Vuosien keskilämpötilat ja -sademäärät Pirkkalan lentoasemalla&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lampotila_sademaara_19_0.png" src="../_images/lampotila_sademaara_19_0.png" />
+</div>
+</div>
+<p>Maksimi- ja minimi lämpötilat sekä sademäärät voitaisiin lukea suoraan kuvaajasta.</p>
+<p>Ne voidaan kuitenkin saada myös koodaamalla (käytetään <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.max.html"><code class="docutils literal notranslate"><span class="pre">max()</span></code></a>- ja <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.min.html#pandas.Series.min"><code class="docutils literal notranslate"><span class="pre">min()</span></code></a>-funktioita):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">max_temp</span> <span class="o">=</span> <span class="n">temp</span><span class="p">[</span><span class="n">temp</span> <span class="o">==</span> <span class="n">temp</span><span class="o">.</span><span class="n">max</span><span class="p">()]</span>
+<span class="n">max_temp</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vuosi
+2020    7.041667
+Name: Kuukauden keskilämpötila (degC), dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">min_temp</span> <span class="o">=</span> <span class="n">temp</span><span class="p">[</span><span class="n">temp</span> <span class="o">==</span> <span class="n">temp</span><span class="o">.</span><span class="n">min</span><span class="p">()]</span>
+<span class="n">min_temp</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vuosi
+1987    1.808333
+Name: Kuukauden keskilämpötila (degC), dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">max_rain</span> <span class="o">=</span> <span class="n">rain</span><span class="p">[</span><span class="n">rain</span> <span class="o">==</span> <span class="n">rain</span><span class="o">.</span><span class="n">max</span><span class="p">()]</span>
+<span class="n">max_rain</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vuosi
+1988    72.958333
+Name: Kuukauden sadesumma (mm), dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">min_rain</span> <span class="o">=</span> <span class="n">rain</span><span class="p">[</span><span class="n">rain</span> <span class="o">==</span> <span class="n">rain</span><span class="o">.</span><span class="n">min</span><span class="p">()]</span>
+<span class="n">min_rain</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vuosi
+1993    37.7
+Name: Kuukauden sadesumma (mm), dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Kokeile seuraavaksi itse selvittää esimerkiksi oman kotikaupunkisi lämpötilan ja sademäärän vuosittaiset keskiarvot. Voit piirtää myös tietyn vuoden kuukausittaiset keskiarvot!</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./harjoitukset"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="interaktiivinen_kartta.html" title="previous page">Interaktiiviset kartat</a>
+    <a class='right-next' id="next-link" href="openstreetmap.html" title="next page">Open Street Map</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Juha Teuho<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a>Toteutettu Opetushallituksen valtionavustuksella tiedekasvatuksen edistämiseen.</a></br><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> Tämän sivuston materiaali on käytettävissä seuraavalla lisenssillä: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY 4.0.</a>
+</div>    
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
