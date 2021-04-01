@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="fi">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,6 +43,7 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -54,8 +55,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://opendata-education.github.io/Maantiede/intro.html/harjoitukset/maailmankartta.html" />
     <link rel="shortcut icon" href="../_static/logo.png"/>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="index" title="Sisällysluettelo" href="../genindex.html" />
+    <link rel="search" title="Etsi" href="../search.html" />
     <link rel="next" title="Interaktiiviset kartat" href="interaktiivinen_kartta.html" />
     <link rel="prev" title="Tervetuloa avoimen datan pariin" href="../intro.html" />
 
@@ -93,7 +94,7 @@
 </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Hae tästä kirjasta ..." aria-label="Hae tästä kirjasta ..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="nav sidenav_l1">
@@ -134,6 +135,11 @@
    Lyhimmän reitin analyysi
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1854_koleraepidemia.html">
+   1854 - John Snow ja kolera
+  </a>
+ </li>
 </ul>
 
 </nav> <!-- To handle the deprecated key -->
@@ -158,8 +164,8 @@
             
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
                 data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                aria-expanded="true" aria-label="Vaihda navigointia" aria-controls="site-navigation"
+                title="Vaihda navigointia" data-toggle="tooltip" data-placement="left">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-up"></i>
@@ -167,7 +173,7 @@
             
             
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Lataa tämä sivu"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -175,10 +181,10 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../_sources/harjoitukset/maailmankartta.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Lataa lähdetiedosto" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Tulosta PDF-tiedostoon"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
@@ -191,12 +197,12 @@
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="https://github.com/opendata-education/Maantiede"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
+                data-toggle="tooltip" data-placement="left" title="Lähteen arkisto"><i
+                    class="fab fa-github"></i>arkisto</button></a>
         <a class="issues-button"
             href="https://github.com/opendata-education/Maantiede/issues/new?title=Issue%20on%20page%20%2Fharjoitukset/maailmankartta.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                title="Avaa ongelma"><i class="fas fa-lightbulb"></i>avoin ongelma</button></a>
         
     </div>
 </div>
@@ -204,8 +210,8 @@
 
             <!-- Full screen (wrap in <a> to have style consistency -->
             <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                    title="Fullscreen mode"><i
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Koko näytön tila"
+                    title="Koko näytön tila"><i
                         class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
@@ -216,7 +222,7 @@
     <div class="dropdown-buttons">
         
         <a class="binder-button" href="https://mybinder.org/v2/gh/opendata-education/Maantiede/main?urlpath=tree/materiaali/harjoitukset/maailmankartta.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Tuoda markkinoille Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
@@ -234,7 +240,7 @@
             
         <div class="tocsection onthispage pt-5 pb-3">
             <i class="fas fa-list"></i>
-            Contents
+            Sisällys
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
@@ -266,7 +272,7 @@
 <p>Tässä esimerkissä käytetty data on peräisin <a class="reference external" href="https://databank.worldbank.org/home">Maailmanpankin sivustolla</a>, josta on saatavilla paljon muutakin mielenkiintoista dataa.</p>
 <div class="section" id="datan-hankinta-ja-lataaminen">
 <h2>Datan hankinta ja lataaminen<a class="headerlink" href="#datan-hankinta-ja-lataaminen" title="Permalink to this headline">¶</a></h2>
-<p>Aloitetaan hankkimalla haluamamme data. Tätä esimerkkiä varten tarvittava tiedosto on valmiiksi ladattu ja löytyy kansiosta ‘data’ nimellä ‘CO2-emissions-per-capita-2014.csv’. Hiilidioksidipäästödata on peräisin osoitteesta <a class="reference external" href="https://databank.worldbank.org/source/world-development-indicators">https://databank.worldbank.org/source/world-development-indicators#</a>.</p>
+<p>Aloitetaan hankkimalla haluamamme data. Tätä esimerkkiä varten tarvittava tiedosto on valmiiksi ladattu ja löytyy kansiosta ’data’ nimellä ’CO2-emissions-per-capita-2014.csv’. Hiilidioksidipäästödata on peräisin osoitteesta <a class="reference external" href="https://databank.worldbank.org/source/world-development-indicators">https://databank.worldbank.org/source/world-development-indicators#</a>.</p>
 <p>Valtioiden rajat, joita piirtämiseen tarvitaan voitaisiin lukea vektorimuotoisena .shp-päätteisestä tiedostosta. Nämä tiedot löytyvät kuitenkin valmiina <a class="reference external" href="https://geopandas.org/">GeoPandas</a>-kirjastossa. Halutessaan valtioiden rajoista voi ladata korkeampiresoluutioisen version esimerkiksi osoitteesta <a class="reference external" href="https://www.naturalearthdata.com/downloads/">https://www.naturalearthdata.com/downloads/</a>. Netistä löytyy myös muita .shp-tiedostoja, jotka voivat sisältää esimerkiksi Suomen kunnat.</p>
 <p>Datatiedostojen lukemiseen käytetään yleensä <a class="reference external" href="https://pandas.pydata.org/">Pandas</a>-kirjastoa. Geodatan (valtioiden rajat .shp-tiedostona) lukemiseen käytetään kuitenkin GeoPandasia. Aloitetaan datan tutkiminen tuomalla tarvittavat kirjastot. Datan visualisointia varten tarvitaan <a class="reference external" href="https://matplotlib.org/">matplotlib</a>-kirjastoa.</p>
 <div class="cell docutils container">
@@ -308,8 +314,8 @@ Luetaan kyseinen data ja katsotaan, mitä se sisältää.</p>
 </div>
 </div>
 </div>
-<p>Kuten nähdään, tiedosto sisältää useita sarakkeita, joista meidän kannaltamme tärkeimmät ovat “name”, joka kertoo valtion nimen ja “geometry”, joka sisältää valtion rajojen tiedot.</p>
-<p>Voimme piirtää geopandasilla lukemamme datan suoraan käyttämällä ‘plot’-käskyä</p>
+<p>Kuten nähdään, tiedosto sisältää useita sarakkeita, joista meidän kannaltamme tärkeimmät ovat ”name”, joka kertoo valtion nimen ja ”geometry”, joka sisältää valtion rajojen tiedot.</p>
+<p>Voimme piirtää geopandasilla lukemamme datan suoraan käyttämällä ’plot’-käskyä</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">world</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
@@ -354,7 +360,7 @@ Luetaan kyseinen data ja katsotaan, mitä se sisältää.</p>
 </div>
 </div>
 </div>
-<p>Huomataan, että hiilidioksidipäästöjen data on sarakkeessa “2014 [YR2014]” yksikössä tonnia per henkilö (vuodessa). Lisäksi valtioiden nimen tai koodin sisältävä sarake on nimetty eri tavalla kuin toisessa datatiedostossa. Tämä täytyy ottaa huomioon datatiedostoja yhdistettäessä. Kun haluamme piirtää valtiokohtaista dataa kartalle, meidän on yhdistettävä eri datasetit siten, että saman valtion geometriatiedot yhdistyvät sen hiilidioksiditietoihin. Tämä onnistuu ‘merge’-funktiolla.</p>
+<p>Huomataan, että hiilidioksidipäästöjen data on sarakkeessa ”2014 [YR2014]” yksikössä tonnia per henkilö (vuodessa). Lisäksi valtioiden nimen tai koodin sisältävä sarake on nimetty eri tavalla kuin toisessa datatiedostossa. Tämä täytyy ottaa huomioon datatiedostoja yhdistettäessä. Kun haluamme piirtää valtiokohtaista dataa kartalle, meidän on yhdistettävä eri datasetit siten, että saman valtion geometriatiedot yhdistyvät sen hiilidioksiditietoihin. Tämä onnistuu ’merge’-funktiolla.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -372,7 +378,7 @@ Luetaan kyseinen data ja katsotaan, mitä se sisältää.</p>
 </div>
 <div class="section" id="datan-visualisoiminen">
 <h2>Datan visualisoiminen<a class="headerlink" href="#datan-visualisoiminen" title="Permalink to this headline">¶</a></h2>
-<p>Nyt kun data on yhdistetty, voimme piirtää sen plot-funktiolla. Parametreiksi plot-funktiolle annamme sen sarakkeen nimen, jonka mukaan haluamme valtiot värittää, kuvan koon sekä värikartan (‘Greens’).</p>
+<p>Nyt kun data on yhdistetty, voimme piirtää sen plot-funktiolla. Parametreiksi plot-funktiolle annamme sen sarakkeen nimen, jonka mukaan haluamme valtiot värittää, kuvan koon sekä värikartan (’Greens’).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;2014 [YR2014]&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">20</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Greens&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span> <span class="c1"># 6 eri väriä</span>
@@ -467,7 +473,7 @@ Luetaan kyseinen data ja katsotaan, mitä se sisältää.</p>
     <div class="container">
       <p>
         
-          By Juha Teuho<br/>
+          Tekijä HIP Education and Open Data Team<br/>
         
           <div class="extra_footer">
             <div>
