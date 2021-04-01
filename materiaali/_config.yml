@@ -6,7 +6,7 @@
 #######################################################################################
 # Book settings
 title                       : Maantiede  # The title of the book. Will be placed in the left navbar.
-author                      : Juha Teuho  # The author of the book
+author                      : HIP Education and Open Data Team  # The author of the book
 copyright                   : "2021"  # Copyright year to be placed in the footer
 logo                        : logo.png  # A path to the book logo
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
@@ -76,5 +76,5 @@ sphinx:
   # A list of extra extensions to load by Sphinx (added to those already used by JB).
   config:
       html_show_copyright: false
-      language: en
+      language: fi
 only_build_toc_files: true
