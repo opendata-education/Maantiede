@@ -4,7 +4,8 @@
 <html lang="fi">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Lyhimmän reitin analyysi &#8212; Maantiede</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
@@ -104,7 +105,7 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p>
  <span class="caption-text">
   Harjoitukset
  </span>
@@ -246,7 +247,7 @@
         
               <div>
                 
-  <div class="section" id="lyhimman-reitin-analyysi">
+  <section id="lyhimman-reitin-analyysi">
 <h1>Lyhimmän reitin analyysi<a class="headerlink" href="#lyhimman-reitin-analyysi" title="Permalink to this headline">¶</a></h1>
 <p>Jatketaan aiempaa Open Street Map -esimerkkiä ja tutkitaan edelleen Tampereen keskustorin ympäristöä. Tällä kertaa tavoitteenamme on tehdä yksinkertainen lyhimmän reitin analyysi. Selvitetään kartan pohjoisin piste ja haetaan lyhin reitti keskustorilta tähän pisteeseen. Tutkitaan vaihtelun vuoksi aluetta 500 metrin etäisyydellä keskustorista.</p>
 <p>Aloitetaan tuomalla tarvittavat kirjastot <a class="reference external" href="https://osmnx.readthedocs.io/en/stable/">osmnx</a> ja <a class="reference external" href="https://matplotlib.org/">matplotlib</a> sekä hakemalla katuverkoston kuvaajaan tarvittavat tiedot aiemman esimerkin tapaan <a class="reference external" href="https://osmnx.readthedocs.io/en/stable/osmnx.html#osmnx.graph.graph_from_address"><code class="docutils literal notranslate"><span class="pre">ox.graph_from_address()</span></code></a>-funktiolla. Lisätään funktiolle vielä parametri <code class="docutils literal notranslate"><span class="pre">network_type='drive'</span></code>, jolloin saamme tiedot sellaisista kaduista, jotka ovat tarkoitettu autolla ajamista varten.</p>
@@ -349,19 +350,19 @@
     </tr>
     <tr>
       <th>33050117</th>
-      <td>61.494416</td>
-      <td>23.769856</td>
+      <td>61.494406</td>
+      <td>23.769787</td>
       <td>NaN</td>
       <td>4</td>
-      <td>POINT (23.76986 61.49442)</td>
+      <td>POINT (23.76979 61.49441)</td>
     </tr>
     <tr>
-      <th>33136734</th>
-      <td>61.495456</td>
-      <td>23.769003</td>
+      <th>33136737</th>
+      <td>61.494617</td>
+      <td>23.767772</td>
       <td>NaN</td>
       <td>3</td>
-      <td>POINT (23.76900 61.49546)</td>
+      <td>POINT (23.76777 61.49462)</td>
     </tr>
   </tbody>
 </table>
@@ -415,7 +416,7 @@
 </div>
 </div>
 <p>Nyt näemme kartalla laskemamme lyhimmän reitin valitsemiemme pisteiden välillä! Kokeile itse selvittää lyhin reitti joidenkin muiden pisteiden välillä! Lyhin reitti on tässä laskettu ainoastaan etäisyyksien perusteella. Voisivatko esimerkiksi nopeusrajoitukset vaikuttaa tulokseen?</p>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {

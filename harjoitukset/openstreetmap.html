@@ -4,7 +4,8 @@
 <html lang="fi">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Open Street Map &#8212; Maantiede</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
@@ -104,7 +105,7 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p>
  <span class="caption-text">
   Harjoitukset
  </span>
@@ -246,7 +247,7 @@
         
               <div>
                 
-  <div class="section" id="open-street-map">
+  <section id="open-street-map">
 <h1>Open Street Map<a class="headerlink" href="#open-street-map" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://www.openstreetmap.org/">Open Street Map</a> (OSM) on avoin karttapalvelu, jossa käyttäjät voivat itse osallistua karttojen luomiseen. Koska kyseessä on avoin projekti, sen aineistoa voidaan hyödyntää vapaasti omiin tarkoituksiin (myös kaupallisiin). Pääsemme pythonilla käsiksi OSM:n aineistoon <a class="reference external" href="https://osmnx.readthedocs.io/en/stable/index.html">osmnx</a>-kirjaston avulla. Aineistosta voidaan hakea paljon kaikenlaista paikkatietoa, kuten tieverkostoja, rakennuksia, puistoja, ravintoloita jne.</p>
 <p>Tässä harjoituksessa tutustutaan osmnx-kirjastoon, haetaan sen avulla paikkatietoja Tampereen keskustorin lähettyviltä ja piirretään niitä kartalle. Lisäksi tässä harjoituksessa tarvitaan <a class="reference external" href="https://matplotlib.org/">matplotlib</a>-kirjastoa, joka sisältää funktioita kuvaajien piirtämistä varten.</p>
@@ -283,8 +284,7 @@
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/openstreetmap_5_0.png" src="../_images/openstreetmap_5_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;Figure size 576x576 with 1 Axes&gt;,
- &lt;matplotlib.axes._subplots.AxesSubplot at 0x7fd44d510190&gt;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;Figure size 576x576 with 1 Axes&gt;, &lt;AxesSubplot:&gt;)
 </pre></div>
 </div>
 </div>
@@ -309,10 +309,10 @@
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;unique_id&#39;, &#39;osmid&#39;, &#39;element_type&#39;, &#39;amenity&#39;, &#39;geometry&#39;,
        &#39;addr:street&#39;, &#39;name&#39;, &#39;parking&#39;, &#39;wheelchair&#39;, &#39;entrance&#39;,
        ...
-       &#39;building:min_level&#39;, &#39;brand&#39;, &#39;brand:wikipedia&#39;,
-       &#39;seamark:landmark:category&#39;, &#39;seamark:type&#39;, &#39;construction&#39;,
-       &#39;official_name&#39;, &#39;ways&#39;, &#39;type&#39;, &#39;historic:name&#39;],
-      dtype=&#39;object&#39;, length=124)
+       &#39;brand&#39;, &#39;brand:wikipedia&#39;, &#39;min_height&#39;, &#39;seamark:landmark:category&#39;,
+       &#39;seamark:type&#39;, &#39;construction&#39;, &#39;official_name&#39;, &#39;ways&#39;, &#39;type&#39;,
+       &#39;historic:name&#39;],
+      dtype=&#39;object&#39;, length=131)
 </pre></div>
 </div>
 </div>
@@ -349,7 +349,11 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/openstreetmap_9_0.png" src="../_images/openstreetmap_9_0.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.8/x64/lib/python3.8/site-packages/ipykernel/ipkernel.py:283: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
+  and should_run_async(code)
+</pre></div>
+</div>
+<img alt="../_images/openstreetmap_9_1.png" src="../_images/openstreetmap_9_1.png" />
 </div>
 </div>
 <p>Nyt olemme saaneet piirrettyä jo sekä tieverkoston, että rakennukset. Lisätään vielä puistot kuvaan. Ne löytyvät vapaa-aikaan viittaavalla tagilla ”leisure”. Tällä tagilla löytyy kuitenkin muitakin paikkoja kuin puistoja, joten dataa pitää hieman karsia.</p>
@@ -364,6 +368,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.8/x64/lib/python3.8/site-packages/ipykernel/ipkernel.py:283: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
+  and should_run_async(code)
+</pre></div>
+</div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;unique_id&#39;, &#39;osmid&#39;, &#39;element_type&#39;, &#39;addr:city&#39;, &#39;addr:country&#39;,
        &#39;addr:housenumber&#39;, &#39;addr:street&#39;, &#39;amenity&#39;, &#39;contact:website&#39;,
        &#39;leisure&#39;, &#39;name&#39;, &#39;was:name&#39;, &#39;geometry&#39;, &#39;barrier&#39;, &#39;foot&#39;,
@@ -391,6 +399,10 @@
  &#39;marina&#39; &#39;arena&#39; &#39;slipway&#39; &#39;fitness_station&#39; &#39;sauna&#39; &#39;pitch&#39; &#39;dance&#39;
  &#39;fitness_centre&#39; &#39;amusement_arcade&#39; &#39;park&#39; &#39;stadium&#39; &#39;miniature_golf&#39;
  &#39;dog_park&#39; &#39;*&#39; &#39;garden&#39; &#39;track&#39; &#39;nature_reserve&#39;]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.8/x64/lib/python3.8/site-packages/ipykernel/ipkernel.py:283: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
+  and should_run_async(code)
 </pre></div>
 </div>
 </div>
@@ -447,11 +459,15 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/openstreetmap_19_0.png" src="../_images/openstreetmap_19_0.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.8/x64/lib/python3.8/site-packages/ipykernel/ipkernel.py:283: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
+  and should_run_async(code)
+</pre></div>
+</div>
+<img alt="../_images/openstreetmap_19_1.png" src="../_images/openstreetmap_19_1.png" />
 </div>
 </div>
 <p>Karttamme on nyt valmis. Sen avulla voimme tarkastella Tampereen keskustan katuverkostoa, rakennuksia ja puistoja. Kokeile itse tehdä oma karttasi jostain muusta paikasta tai lisää eri paikkatietoja tähän karttaan!</p>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
