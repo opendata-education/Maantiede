@@ -8,3 +8,4 @@ mapclassify
 descartes
 osmnx
 folium
+bokeh
