@@ -1,0 +1,5 @@
+"Entity, Year, ""Share of food miles (Poore & Nemecek, 2018)"", ""Ambient transport (kgCO2eq per tonne-kilometer) (Poore & Nemecek, 2018)"""
+Air,2010,0.16,1.13
+Rail,2010,9.9,0.05
+Road,2010,30.97,0.2
+Water,2010,58.97,0.1
