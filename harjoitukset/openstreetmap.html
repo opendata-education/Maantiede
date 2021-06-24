@@ -402,11 +402,102 @@
 <span class="g g-Whitespace">    </span><span class="mi">546</span> 
 
 <span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/osmnx/downloader.py</span> in <span class="ni">overpass_request</span><span class="nt">(data, pause, error_pause)</span>
-<span class="g g-Whitespace">    </span><span class="mi">716</span>             <span class="n">this_pause</span> <span class="o">=</span> <span class="n">_get_pause</span><span class="p">(</span><span class="n">base_endpoint</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">717</span>         <span class="n">utils</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pausing </span><span class="si">{</span><span class="n">this_pause</span><span class="si">}</span><span class="s2"> seconds before making HTTP POST request&quot;</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">718</span>         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">this_pause</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">719</span> 
-<span class="g g-Whitespace">    </span><span class="mi">720</span>         <span class="c1"># transmit the HTTP POST request</span>
+<span class="g g-Whitespace">    </span><span class="mi">721</span>         <span class="n">utils</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Post </span><span class="si">{</span><span class="n">prepared_url</span><span class="si">}</span><span class="s2"> with timeout=</span><span class="si">{</span><span class="n">settings</span><span class="o">.</span><span class="n">timeout</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">722</span>         <span class="n">headers</span> <span class="o">=</span> <span class="n">_get_http_headers</span><span class="p">()</span>
+<span class="ne">--&gt; </span><span class="mi">723</span>         <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">settings</span><span class="o">.</span><span class="n">timeout</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">724</span>         <span class="n">sc</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span>
+<span class="g g-Whitespace">    </span><span class="mi">725</span> 
+
+<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/requests/api.py</span> in <span class="ni">post</span><span class="nt">(url, data, json, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">117</span>     <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">118</span><span class="s2"> </span>
+<span class="ne">--&gt; </span><span class="mi">119</span><span class="s2">     return request(&#39;post&#39;, url, data=data, json=json, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">120</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">121</span><span class="s2"> </span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/requests/api.py</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">59</span><span class="s2">     # cases, and look like a memory leak in others.</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span><span class="s2">     with sessions.Session() as session:</span>
+<span class="ne">---&gt; </span><span class="mi">61</span><span class="s2">         return session.request(method=method, url=url, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span><span class="s2"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">63</span><span class="s2"> </span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/requests/sessions.py</span> in <span class="ni">request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
+<span class="g g-Whitespace">    </span><span class="mi">540</span><span class="s2">         }</span>
+<span class="g g-Whitespace">    </span><span class="mi">541</span><span class="s2">         send_kwargs.update(settings)</span>
+<span class="ne">--&gt; </span><span class="mi">542</span><span class="s2">         resp = self.send(prep, **send_kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">543</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">544</span><span class="s2">         return resp</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/requests/sessions.py</span> in <span class="ni">send</span><span class="nt">(self, request, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">695</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">696</span><span class="s2">         if not stream:</span>
+<span class="ne">--&gt; </span><span class="mi">697</span><span class="s2">             r.content</span>
+<span class="g g-Whitespace">    </span><span class="mi">698</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">699</span><span class="s2">         return r</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/requests/models.py</span> in <span class="ni">content</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">829</span><span class="s2">                 self._content = None</span>
+<span class="g g-Whitespace">    </span><span class="mi">830</span><span class="s2">             else:</span>
+<span class="ne">--&gt; </span><span class="mi">831</span><span class="s2">                 self._content = b&#39;&#39;.join(self.iter_content(CONTENT_CHUNK_SIZE)) or b&#39;&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">832</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">833</span><span class="s2">         self._content_consumed = True</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/requests/models.py</span> in <span class="ni">generate</span><span class="nt">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">751</span><span class="s2">             if hasattr(self.raw, &#39;stream&#39;):</span>
+<span class="g g-Whitespace">    </span><span class="mi">752</span><span class="s2">                 try:</span>
+<span class="ne">--&gt; </span><span class="mi">753</span><span class="s2">                     for chunk in self.raw.stream(chunk_size, decode_content=True):</span>
+<span class="g g-Whitespace">    </span><span class="mi">754</span><span class="s2">                         yield chunk</span>
+<span class="g g-Whitespace">    </span><span class="mi">755</span><span class="s2">                 except ProtocolError as e:</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/urllib3/response.py</span> in <span class="ni">stream</span><span class="nt">(self, amt, decode_content)</span>
+<span class="g g-Whitespace">    </span><span class="mi">574</span><span class="s2">         else:</span>
+<span class="g g-Whitespace">    </span><span class="mi">575</span><span class="s2">             while not is_fp_closed(self._fp):</span>
+<span class="ne">--&gt; </span><span class="mi">576</span><span class="s2">                 data = self.read(amt=amt, decode_content=decode_content)</span>
+<span class="g g-Whitespace">    </span><span class="mi">577</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">578</span><span class="s2">                 if data:</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/urllib3/response.py</span> in <span class="ni">read</span><span class="nt">(self, amt, decode_content, cache_content)</span>
+<span class="g g-Whitespace">    </span><span class="mi">517</span><span class="s2">             else:</span>
+<span class="g g-Whitespace">    </span><span class="mi">518</span><span class="s2">                 cache_content = False</span>
+<span class="ne">--&gt; </span><span class="mi">519</span><span class="s2">                 data = self._fp.read(amt) if not fp_closed else b&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">520</span><span class="s2">                 if (</span>
+<span class="g g-Whitespace">    </span><span class="mi">521</span><span class="s2">                     amt != 0 and not data</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/http/client.py</span> in <span class="ni">read</span><span class="nt">(self, amt)</span>
+<span class="g g-Whitespace">    </span><span class="mi">453</span><span class="s2">             # Amount is given, implement using readinto</span>
+<span class="g g-Whitespace">    </span><span class="mi">454</span><span class="s2">             b = bytearray(amt)</span>
+<span class="ne">--&gt; </span><span class="mi">455</span><span class="s2">             n = self.readinto(b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">456</span><span class="s2">             return memoryview(b)[:n].tobytes()</span>
+<span class="g g-Whitespace">    </span><span class="mi">457</span><span class="s2">         else:</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/http/client.py</span> in <span class="ni">readinto</span><span class="nt">(self, b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">497</span><span class="s2">         # connection, and the user is reading more bytes than will be provided</span>
+<span class="g g-Whitespace">    </span><span class="mi">498</span><span class="s2">         # (for example, reading in 1k chunks)</span>
+<span class="ne">--&gt; </span><span class="mi">499</span><span class="s2">         n = self.fp.readinto(b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">500</span><span class="s2">         if not n and b:</span>
+<span class="g g-Whitespace">    </span><span class="mi">501</span><span class="s2">             # Ideally, we would raise IncompleteRead if the content-length</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/socket.py</span> in <span class="ni">readinto</span><span class="nt">(self, b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">667</span><span class="s2">         while True:</span>
+<span class="g g-Whitespace">    </span><span class="mi">668</span><span class="s2">             try:</span>
+<span class="ne">--&gt; </span><span class="mi">669</span><span class="s2">                 return self._sock.recv_into(b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">670</span><span class="s2">             except timeout:</span>
+<span class="g g-Whitespace">    </span><span class="mi">671</span><span class="s2">                 self._timeout_occurred = True</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/ssl.py</span> in <span class="ni">recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1239</span><span class="s2">                   &quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot; %</span>
+<span class="g g-Whitespace">   </span><span class="mi">1240</span><span class="s2">                   self.__class__)</span>
+<span class="ne">-&gt; </span><span class="mi">1241</span><span class="s2">             return self.read(nbytes, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1242</span><span class="s2">         else:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1243</span><span class="s2">             return super().recv_into(buffer, nbytes, flags)</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/ssl.py</span> in <span class="ni">read</span><span class="nt">(self, len, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1097</span><span class="s2">         try:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1098</span><span class="s2">             if buffer is not None:</span>
+<span class="ne">-&gt; </span><span class="mi">1099</span><span class="s2">                 return self._sslobj.read(len, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1100</span><span class="s2">             else:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1101</span><span class="s2">                 return self._sslobj.read(len)</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
