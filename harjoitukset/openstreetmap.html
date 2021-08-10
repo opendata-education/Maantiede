@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -297,9 +297,9 @@
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;amenity&#39;, &#39;geometry&#39;, &#39;addr:street&#39;, &#39;name&#39;, &#39;parking&#39;, &#39;wheelchair&#39;,
        &#39;entrance&#39;, &#39;building&#39;, &#39;addr:city&#39;, &#39;addr:housenumber&#39;,
        ...
-       &#39;brand&#39;, &#39;brand:wikipedia&#39;, &#39;min_height&#39;, &#39;seamark:landmark:category&#39;,
-       &#39;seamark:type&#39;, &#39;construction&#39;, &#39;official_name&#39;, &#39;ways&#39;, &#39;type&#39;,
-       &#39;historic:name&#39;],
+       &#39;addr:flats&#39;, &#39;building:min_level&#39;, &#39;min_height&#39;,
+       &#39;seamark:landmark:category&#39;, &#39;seamark:type&#39;, &#39;construction&#39;,
+       &#39;official_name&#39;, &#39;ways&#39;, &#39;type&#39;, &#39;historic:name&#39;],
       dtype=&#39;object&#39;, length=128)
 </pre></div>
 </div>
@@ -337,11 +337,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/ipykernel/ipkernel.py:283: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
-  and should_run_async(code)
-</pre></div>
-</div>
-<img alt="../_images/openstreetmap_9_1.png" src="../_images/openstreetmap_9_1.png" />
+<img alt="../_images/openstreetmap_9_0.png" src="../_images/openstreetmap_9_0.png" />
 </div>
 </div>
 <p>Nyt olemme saaneet piirrettyä jo sekä tieverkoston, että rakennukset. Lisätään vielä puistot kuvaan. Ne löytyvät vapaa-aikaan viittaavalla tagilla ”leisure”. Tällä tagilla löytyy kuitenkin muitakin paikkoja kuin puistoja, joten dataa pitää hieman karsia.</p>
@@ -356,52 +352,50 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/ipykernel/ipkernel.py:283: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
-  and should_run_async(code)
-/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/geopandas/_vectorized.py:142: DeprecationWarning: An exception was ignored while fetching the attribute `__array_interface__` from an object of type &#39;Polygon&#39;.  With the exception of `AttributeError` NumPy will always raise this exception in the future.  Raise this deprecation warning to see the original exception. (Warning added NumPy 1.21)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/geopandas/_vectorized.py:142: DeprecationWarning: An exception was ignored while fetching the attribute `__array_interface__` from an object of type &#39;Polygon&#39;.  With the exception of `AttributeError` NumPy will always raise this exception in the future.  Raise this deprecation warning to see the original exception. (Warning added NumPy 1.21)
   aout[:] = out
-/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/geopandas/_vectorized.py:142: DeprecationWarning: An exception was ignored while fetching the attribute `__array_interface__` from an object of type &#39;MultiPolygon&#39;.  With the exception of `AttributeError` NumPy will always raise this exception in the future.  Raise this deprecation warning to see the original exception. (Warning added NumPy 1.21)
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/geopandas/_vectorized.py:142: DeprecationWarning: An exception was ignored while fetching the attribute `__array_interface__` from an object of type &#39;MultiPolygon&#39;.  With the exception of `AttributeError` NumPy will always raise this exception in the future.  Raise this deprecation warning to see the original exception. (Warning added NumPy 1.21)
   aout[:] = out
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">3908</span><span class="n">f2755cef</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1806</span><span class="o">/</span><span class="mf">1576310420.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># etsitään osoitteen avulla alueella olevat vapaa-aikaan liittyvät paikkatiedot käyttäen tagia &quot;leisure&quot;: True</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">leisure</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">geometries_from_address</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="n">distance</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;leisure&quot;</span><span class="p">:</span><span class="kc">True</span><span class="p">})</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> 
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># katsotaan, mitä sarakkeita &quot;leisure&quot; pitää sisällään:</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">leisure</span><span class="o">.</span><span class="n">columns</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/osmnx/geometries.py</span> in <span class="ni">geometries_from_address</span><span class="nt">(address, tags, dist)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/osmnx/geometries.py</span> in <span class="ni">geometries_from_address</span><span class="nt">(address, tags, dist)</span>
 <span class="g g-Whitespace">    </span><span class="mi">158</span> 
 <span class="g g-Whitespace">    </span><span class="mi">159</span>     <span class="c1"># create GeoDataFrame of geometries around this point</span>
 <span class="ne">--&gt; </span><span class="mi">160</span>     <span class="n">gdf</span> <span class="o">=</span> <span class="n">geometries_from_point</span><span class="p">(</span><span class="n">center_point</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="n">dist</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">161</span> 
 <span class="g g-Whitespace">    </span><span class="mi">162</span>     <span class="k">return</span> <span class="n">gdf</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/osmnx/geometries.py</span> in <span class="ni">geometries_from_point</span><span class="nt">(center_point, tags, dist)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/osmnx/geometries.py</span> in <span class="ni">geometries_from_point</span><span class="nt">(center_point, tags, dist)</span>
 <span class="g g-Whitespace">    </span><span class="mi">116</span> 
 <span class="g g-Whitespace">    </span><span class="mi">117</span>     <span class="c1"># create GeoDataFrame of geometries within this polygon</span>
 <span class="ne">--&gt; </span><span class="mi">118</span>     <span class="n">gdf</span> <span class="o">=</span> <span class="n">geometries_from_polygon</span><span class="p">(</span><span class="n">polygon</span><span class="p">,</span> <span class="n">tags</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">119</span> 
 <span class="g g-Whitespace">    </span><span class="mi">120</span>     <span class="k">return</span> <span class="n">gdf</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/osmnx/geometries.py</span> in <span class="ni">geometries_from_polygon</span><span class="nt">(polygon, tags)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/osmnx/geometries.py</span> in <span class="ni">geometries_from_polygon</span><span class="nt">(polygon, tags)</span>
 <span class="g g-Whitespace">    </span><span class="mi">276</span> 
 <span class="g g-Whitespace">    </span><span class="mi">277</span>     <span class="c1"># download the geometry data from OSM</span>
 <span class="ne">--&gt; </span><span class="mi">278</span>     <span class="n">response_jsons</span> <span class="o">=</span> <span class="n">downloader</span><span class="o">.</span><span class="n">_osm_geometries_download</span><span class="p">(</span><span class="n">polygon</span><span class="p">,</span> <span class="n">tags</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">279</span> 
 <span class="g g-Whitespace">    </span><span class="mi">280</span>     <span class="c1"># create GeoDataFrame from the downloaded data</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/osmnx/downloader.py</span> in <span class="ni">_osm_geometries_download</span><span class="nt">(polygon, tags)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/osmnx/downloader.py</span> in <span class="ni">_osm_geometries_download</span><span class="nt">(polygon, tags)</span>
 <span class="g g-Whitespace">    </span><span class="mi">542</span>     <span class="k">for</span> <span class="n">polygon_coord_str</span> <span class="ow">in</span> <span class="n">polygon_coord_strs</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">543</span>         <span class="n">query_str</span> <span class="o">=</span> <span class="n">_create_overpass_query</span><span class="p">(</span><span class="n">polygon_coord_str</span><span class="p">,</span> <span class="n">tags</span><span class="p">)</span>
 <span class="ne">--&gt; </span><span class="mi">544</span>         <span class="n">response_json</span> <span class="o">=</span> <span class="n">overpass_request</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="n">query_str</span><span class="p">})</span>
 <span class="g g-Whitespace">    </span><span class="mi">545</span>         <span class="n">response_jsons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">response_json</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">546</span> 
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/osmnx/downloader.py</span> in <span class="ni">overpass_request</span><span class="nt">(data, pause, error_pause)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/osmnx/downloader.py</span> in <span class="ni">overpass_request</span><span class="nt">(data, pause, error_pause)</span>
 <span class="g g-Whitespace">    </span><span class="mi">716</span>             <span class="n">this_pause</span> <span class="o">=</span> <span class="n">_get_pause</span><span class="p">(</span><span class="n">base_endpoint</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">717</span>         <span class="n">utils</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pausing </span><span class="si">{</span><span class="n">this_pause</span><span class="si">}</span><span class="s2"> seconds before making HTTP POST request&quot;</span><span class="p">)</span>
 <span class="ne">--&gt; </span><span class="mi">718</span>         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">this_pause</span><span class="p">)</span>
