@@ -11,5 +11,6 @@
   - file: harjoitukset/1854_koleraepidemia
   
 - part: Lyhyitä esimerkkejä
+  chapters:
   - file: harjoitukset/UV
   - file: harjoitukset/Lumensyvyys
