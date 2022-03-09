@@ -246,6 +246,11 @@ const thebe_selector_output = ".output, .cell_output"
         
         
         
+        <a class="colab-button" href="https://colab.research.google.com/github/opendata-education/Maantiede/blob/main/materiaali/harjoitukset/openstreetmap.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Tuoda markkinoille Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
         
         
     </div>
@@ -310,152 +315,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">JSONDecodeError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/requests/models.py:910,</span> in <span class="ni">Response.json</span><span class="nt">(self, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">909</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">910</span>     <span class="k">return</span> <span class="n">complexjson</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">911</span> <span class="k">except</span> <span class="n">JSONDecodeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">912</span>     <span class="c1"># Catch JSON-related errors and raise as requests.JSONDecodeError</span>
-<span class="g g-Whitespace">    </span><span class="mi">913</span>     <span class="c1"># This aliases json.JSONDecodeError and simplejson.JSONDecodeError</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/json/__init__.py:357,</span> in <span class="ni">loads</span><span class="nt">(s, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">354</span> <span class="k">if</span> <span class="p">(</span><span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_hook</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span>
-<span class="g g-Whitespace">    </span><span class="mi">355</span>         <span class="n">parse_int</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">parse_float</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span>
-<span class="g g-Whitespace">    </span><span class="mi">356</span>         <span class="n">parse_constant</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_pairs_hook</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">kw</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">357</span>     <span class="k">return</span> <span class="n">_default_decoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">358</span> <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/json/decoder.py:337,</span> in <span class="ni">JSONDecoder.decode</span><span class="nt">(self, s, _w)</span>
-<span class="g g-Whitespace">    </span><span class="mi">333</span> <span class="sd">&quot;&quot;&quot;Return the Python representation of ``s`` (a ``str`` instance</span>
-<span class="g g-Whitespace">    </span><span class="mi">334</span><span class="sd"> containing a JSON document).</span>
-<span class="g g-Whitespace">    </span><span class="mi">335</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">336</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">337</span> <span class="n">obj</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_decode</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">idx</span><span class="o">=</span><span class="n">_w</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">end</span><span class="p">())</span>
-<span class="g g-Whitespace">    </span><span class="mi">338</span> <span class="n">end</span> <span class="o">=</span> <span class="n">_w</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span><span class="o">.</span><span class="n">end</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/json/decoder.py:355,</span> in <span class="ni">JSONDecoder.raw_decode</span><span class="nt">(self, s, idx)</span>
-<span class="g g-Whitespace">    </span><span class="mi">354</span> <span class="k">except</span> <span class="ne">StopIteration</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">355</span>     <span class="k">raise</span> <span class="n">JSONDecodeError</span><span class="p">(</span><span class="s2">&quot;Expecting value&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">err</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="kn">from</span> <span class="bp">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">356</span> <span class="k">return</span> <span class="n">obj</span><span class="p">,</span> <span class="n">end</span>
-
-<span class="ne">JSONDecodeError</span>: Expecting value: line 1 column 1 (char 0)
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">JSONDecodeError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/osmnx/downloader.py:784,</span> in <span class="ni">overpass_request</span><span class="nt">(data, pause, error_pause)</span>
-<span class="g g-Whitespace">    </span><span class="mi">783</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">784</span>     <span class="n">response_json</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">785</span>     <span class="k">if</span> <span class="s2">&quot;remark&quot;</span> <span class="ow">in</span> <span class="n">response_json</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/requests/models.py:917,</span> in <span class="ni">Response.json</span><span class="nt">(self, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">916</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">917</span>     <span class="k">raise</span> <span class="n">RequestsJSONDecodeError</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">msg</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">doc</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">pos</span><span class="p">)</span>
-
-<span class="ne">JSONDecodeError</span>: [Errno Expecting value] &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-<span class="o">&lt;!</span>DOCTYPE html PUBLIC <span class="s2">&quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;</span>
-    <span class="s2">&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">html</span> <span class="n">xmlns</span><span class="o">=</span><span class="s2">&quot;http://www.w3.org/1999/xhtml&quot;</span> <span class="n">xml</span><span class="p">:</span><span class="n">lang</span><span class="o">=</span><span class="s2">&quot;en&quot;</span> <span class="n">lang</span><span class="o">=</span><span class="s2">&quot;en&quot;</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">meta</span> <span class="n">http</span><span class="o">-</span><span class="n">equiv</span><span class="o">=</span><span class="s2">&quot;content-type&quot;</span> <span class="n">content</span><span class="o">=</span><span class="s2">&quot;text/html; charset=utf-8&quot;</span> <span class="n">lang</span><span class="o">=</span><span class="s2">&quot;en&quot;</span><span class="o">/&gt;</span>
-  <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">OSM3S</span> <span class="n">Response</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
-
-<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">The</span> <span class="n">data</span> <span class="n">included</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">document</span> <span class="ow">is</span> <span class="kn">from</span> <span class="nn">www.openstreetmap.org.</span> <span class="n">The</span> <span class="n">data</span> <span class="ow">is</span> <span class="n">made</span> <span class="n">available</span> <span class="n">under</span> <span class="n">ODbL</span><span class="o">.&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&lt;</span><span class="n">strong</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;color:#FF0000&quot;</span><span class="o">&gt;</span><span class="n">Error</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span><span class="p">:</span> <span class="n">runtime</span> <span class="n">error</span><span class="p">:</span> <span class="n">open64</span><span class="p">:</span> <span class="mi">0</span> <span class="n">Success</span> <span class="o">/</span><span class="n">osm3s_v0</span><span class="mf">.7.57</span><span class="n">_osm_base</span> <span class="n">Dispatcher_Client</span><span class="p">::</span><span class="n">request_read_and_idx</span><span class="p">::</span><span class="n">timeout</span><span class="o">.</span> <span class="n">The</span> <span class="n">server</span> <span class="ow">is</span> <span class="n">probably</span> <span class="n">too</span> <span class="n">busy</span> <span class="n">to</span> <span class="n">handle</span> <span class="n">your</span> <span class="n">request</span><span class="o">.</span> <span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-
-<span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
-<span class="p">:</span> <span class="mi">0</span>
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">Input In [3],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Haetaan OpenStreetMapin katuverkosto &quot;graph_from_address&quot;-funktion avulla</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">graph</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">graph_from_address</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="n">distance</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Piirretään verkosto näytölle</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">ox</span><span class="o">.</span><span class="n">plot_graph</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/osmnx/graph.py:243,</span> in <span class="ni">graph_from_address</span><span class="nt">(address, dist, dist_type, network_type, simplify, retain_all, truncate_by_edge, return_coords, clean_periphery, custom_filter)</span>
-<span class="g g-Whitespace">    </span><span class="mi">240</span> <span class="n">point</span> <span class="o">=</span> <span class="n">geocoder</span><span class="o">.</span><span class="n">geocode</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">address</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">242</span> <span class="c1"># then create a graph from this point</span>
-<span class="ne">--&gt; </span><span class="mi">243</span> <span class="n">G</span> <span class="o">=</span> <span class="n">graph_from_point</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">244</span>     <span class="n">point</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">245</span>     <span class="n">dist</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">246</span>     <span class="n">dist_type</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">247</span>     <span class="n">network_type</span><span class="o">=</span><span class="n">network_type</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">248</span>     <span class="n">simplify</span><span class="o">=</span><span class="n">simplify</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">249</span>     <span class="n">retain_all</span><span class="o">=</span><span class="n">retain_all</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">250</span>     <span class="n">truncate_by_edge</span><span class="o">=</span><span class="n">truncate_by_edge</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">251</span>     <span class="n">clean_periphery</span><span class="o">=</span><span class="n">clean_periphery</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">252</span>     <span class="n">custom_filter</span><span class="o">=</span><span class="n">custom_filter</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">253</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">254</span> <span class="n">utils</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;graph_from_address returned graph with </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">G</span><span class="p">)</span><span class="si">}</span><span class="s2"> nodes and </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">edges</span><span class="p">)</span><span class="si">}</span><span class="s2"> edges&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">256</span> <span class="k">if</span> <span class="n">return_coords</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/osmnx/graph.py:158,</span> in <span class="ni">graph_from_point</span><span class="nt">(center_point, dist, dist_type, network_type, simplify, retain_all, truncate_by_edge, clean_periphery, custom_filter)</span>
-<span class="g g-Whitespace">    </span><span class="mi">155</span> <span class="n">north</span><span class="p">,</span> <span class="n">south</span><span class="p">,</span> <span class="n">east</span><span class="p">,</span> <span class="n">west</span> <span class="o">=</span> <span class="n">utils_geo</span><span class="o">.</span><span class="n">bbox_from_point</span><span class="p">(</span><span class="n">center_point</span><span class="p">,</span> <span class="n">dist</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">157</span> <span class="c1"># create a graph from the bounding box</span>
-<span class="ne">--&gt; </span><span class="mi">158</span> <span class="n">G</span> <span class="o">=</span> <span class="n">graph_from_bbox</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">159</span>     <span class="n">north</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">160</span>     <span class="n">south</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">161</span>     <span class="n">east</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">162</span>     <span class="n">west</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">163</span>     <span class="n">network_type</span><span class="o">=</span><span class="n">network_type</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">164</span>     <span class="n">simplify</span><span class="o">=</span><span class="n">simplify</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">165</span>     <span class="n">retain_all</span><span class="o">=</span><span class="n">retain_all</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">166</span>     <span class="n">truncate_by_edge</span><span class="o">=</span><span class="n">truncate_by_edge</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">167</span>     <span class="n">clean_periphery</span><span class="o">=</span><span class="n">clean_periphery</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">168</span>     <span class="n">custom_filter</span><span class="o">=</span><span class="n">custom_filter</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">169</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">171</span> <span class="k">if</span> <span class="n">dist_type</span> <span class="o">==</span> <span class="s2">&quot;network&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">172</span>     <span class="c1"># if dist_type is network, find node in graph nearest to center point</span>
-<span class="g g-Whitespace">    </span><span class="mi">173</span>     <span class="c1"># then truncate graph by network dist from it</span>
-<span class="g g-Whitespace">    </span><span class="mi">174</span>     <span class="n">node</span> <span class="o">=</span> <span class="n">distance</span><span class="o">.</span><span class="n">nearest_nodes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">X</span><span class="o">=</span><span class="p">[</span><span class="n">center_point</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">Y</span><span class="o">=</span><span class="p">[</span><span class="n">center_point</span><span class="p">[</span><span class="mi">0</span><span class="p">]])[</span><span class="mi">0</span><span class="p">]</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/osmnx/graph.py:83,</span> in <span class="ni">graph_from_bbox</span><span class="nt">(north, south, east, west, network_type, simplify, retain_all, truncate_by_edge, clean_periphery, custom_filter)</span>
-<span class="g g-Whitespace">     </span><span class="mi">80</span> <span class="n">polygon</span> <span class="o">=</span> <span class="n">utils_geo</span><span class="o">.</span><span class="n">bbox_to_poly</span><span class="p">(</span><span class="n">north</span><span class="p">,</span> <span class="n">south</span><span class="p">,</span> <span class="n">east</span><span class="p">,</span> <span class="n">west</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span> <span class="c1"># create graph using this polygon geometry</span>
-<span class="ne">---&gt; </span><span class="mi">83</span> <span class="n">G</span> <span class="o">=</span> <span class="n">graph_from_polygon</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">84</span>     <span class="n">polygon</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span>     <span class="n">network_type</span><span class="o">=</span><span class="n">network_type</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">86</span>     <span class="n">simplify</span><span class="o">=</span><span class="n">simplify</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">87</span>     <span class="n">retain_all</span><span class="o">=</span><span class="n">retain_all</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">88</span>     <span class="n">truncate_by_edge</span><span class="o">=</span><span class="n">truncate_by_edge</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">89</span>     <span class="n">clean_periphery</span><span class="o">=</span><span class="n">clean_periphery</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">90</span>     <span class="n">custom_filter</span><span class="o">=</span><span class="n">custom_filter</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">91</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">93</span> <span class="n">utils</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;graph_from_bbox returned graph with </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">G</span><span class="p">)</span><span class="si">}</span><span class="s2"> nodes and </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">edges</span><span class="p">)</span><span class="si">}</span><span class="s2"> edges&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">94</span> <span class="k">return</span> <span class="n">G</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/osmnx/graph.py:422,</span> in <span class="ni">graph_from_polygon</span><span class="nt">(polygon, network_type, simplify, retain_all, truncate_by_edge, clean_periphery, custom_filter)</span>
-<span class="g g-Whitespace">    </span><span class="mi">419</span> <span class="n">poly_buff</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">projection</span><span class="o">.</span><span class="n">project_geometry</span><span class="p">(</span><span class="n">poly_proj_buff</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="n">crs_utm</span><span class="p">,</span> <span class="n">to_latlong</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">421</span> <span class="c1"># download the network data from OSM within buffered polygon</span>
-<span class="ne">--&gt; </span><span class="mi">422</span> <span class="n">response_jsons</span> <span class="o">=</span> <span class="n">downloader</span><span class="o">.</span><span class="n">_osm_network_download</span><span class="p">(</span><span class="n">poly_buff</span><span class="p">,</span> <span class="n">network_type</span><span class="p">,</span> <span class="n">custom_filter</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">424</span> <span class="c1"># create buffered graph from the downloaded data</span>
-<span class="g g-Whitespace">    </span><span class="mi">425</span> <span class="n">bidirectional</span> <span class="o">=</span> <span class="n">network_type</span> <span class="ow">in</span> <span class="n">settings</span><span class="o">.</span><span class="n">bidirectional_network_types</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/osmnx/downloader.py:548,</span> in <span class="ni">_osm_network_download</span><span class="nt">(polygon, network_type, custom_filter)</span>
-<span class="g g-Whitespace">    </span><span class="mi">546</span> <span class="k">for</span> <span class="n">polygon_coord_str</span> <span class="ow">in</span> <span class="n">polygon_coord_strs</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">547</span>     <span class="n">query_str</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">overpass_settings</span><span class="si">}</span><span class="s2">;(way</span><span class="si">{</span><span class="n">osm_filter</span><span class="si">}</span><span class="s2">(poly:&#39;</span><span class="si">{</span><span class="n">polygon_coord_str</span><span class="si">}</span><span class="s2">&#39;);&gt;;);out;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">548</span>     <span class="n">response_json</span> <span class="o">=</span> <span class="n">overpass_request</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="n">query_str</span><span class="p">})</span>
-<span class="g g-Whitespace">    </span><span class="mi">549</span>     <span class="n">response_jsons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">response_json</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">550</span> <span class="n">utils</span><span class="o">.</span><span class="n">log</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">551</span>     <span class="sa">f</span><span class="s2">&quot;Got all network data within polygon from API in </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">polygon_coord_strs</span><span class="p">)</span><span class="si">}</span><span class="s2"> request(s)&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">552</span> <span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/osmnx/downloader.py:795,</span> in <span class="ni">overpass_request</span><span class="nt">(data, pause, error_pause)</span>
-<span class="g g-Whitespace">    </span><span class="mi">793</span>     <span class="n">this_pause</span> <span class="o">=</span> <span class="n">error_pause</span> <span class="o">+</span> <span class="n">_get_pause</span><span class="p">(</span><span class="n">base_endpoint</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">794</span>     <span class="n">utils</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">domain</span><span class="si">}</span><span class="s2"> returned </span><span class="si">{</span><span class="n">sc</span><span class="si">}</span><span class="s2">: retry in </span><span class="si">{</span><span class="n">this_pause</span><span class="si">}</span><span class="s2"> secs&quot;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="n">lg</span><span class="o">.</span><span class="n">WARNING</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">795</span>     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">this_pause</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">796</span>     <span class="n">response_json</span> <span class="o">=</span> <span class="n">overpass_request</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">pause</span><span class="p">,</span> <span class="n">error_pause</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">798</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">799</span>     <span class="c1"># else, this was an unhandled status code, throw an exception</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+<img alt="../_images/openstreetmap_5_0.png" src="../_images/openstreetmap_5_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;Figure size 576x576 with 1 Axes&gt;, &lt;AxesSubplot:&gt;)
 </pre></div>
 </div>
 </div>
@@ -473,6 +334,17 @@ const thebe_selector_output = ".output, .cell_output"
 
 <span class="c1"># GeoDataFramen sisältämiä sarakkeita voidaan tarkastella seuraavasti</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">buildings</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;amenity&#39;, &#39;geometry&#39;, &#39;addr:street&#39;, &#39;name&#39;, &#39;parking&#39;, &#39;wheelchair&#39;,
+       &#39;entrance&#39;, &#39;building&#39;, &#39;addr:city&#39;, &#39;addr:housenumber&#39;,
+       ...
+       &#39;seamark:landmark:category&#39;, &#39;seamark:type&#39;, &#39;covered&#39;, &#39;official_name&#39;,
+       &#39;construction&#39;, &#39;check_date&#39;, &#39;ways&#39;, &#39;type&#39;, &#39;old_name:en&#39;,
+       &#39;old_name:fi&#39;],
+      dtype=&#39;object&#39;, length=132)
 </pre></div>
 </div>
 </div>
@@ -508,6 +380,9 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/openstreetmap_9_0.png" src="../_images/openstreetmap_9_0.png" />
+</div>
 </div>
 <p>Nyt olemme saaneet piirrettyä jo sekä tieverkoston, että rakennukset. Lisätään vielä puistot kuvaan. Ne löytyvät vapaa-aikaan viittaavalla tagilla ”leisure”. Tällä tagilla löytyy kuitenkin muitakin paikkoja kuin puistoja, joten dataa pitää hieman karsia.</p>
 <div class="cell docutils container">
@@ -520,11 +395,41 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/osmnx/geometries.py:805: ShapelyDeprecationWarning: __len__ for multi-part geometries is deprecated and will be removed in Shapely 2.0. Check the length of the `geoms` property instead to get the  number of parts of a multi-part geometry.
+  for merged_outer_linestring in list(merged_outer_linestrings):
+/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/osmnx/geometries.py:805: ShapelyDeprecationWarning: Iteration over multi-part geometries is deprecated and will be removed in Shapely 2.0. Use the `geoms` property to access the constituent parts of a multi-part geometry.
+  for merged_outer_linestring in list(merged_outer_linestrings):
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;addr:city&#39;, &#39;addr:country&#39;, &#39;addr:housenumber&#39;, &#39;addr:street&#39;,
+       &#39;amenity&#39;, &#39;contact:website&#39;, &#39;leisure&#39;, &#39;name&#39;, &#39;was:name&#39;, &#39;geometry&#39;,
+       &#39;barrier&#39;, &#39;foot&#39;, &#39;sauna&#39;, &#39;sport&#39;, &#39;access&#39;, &#39;addr:postcode&#39;,
+       &#39;opening_hours&#39;, &#39;wheelchair&#39;, &#39;name:en&#39;, &#39;name:fi&#39;, &#39;alt_name&#39;,
+       &#39;seamark:harbour:category&#39;, &#39;seamark:type&#39;, &#39;phone&#39;, &#39;website&#39;,
+       &#39;building&#39;, &#39;layer&#39;, &#39;payment:bitcoin&#39;, &#39;email&#39;, &#39;level&#39;, &#39;addr:unit&#39;,
+       &#39;fee&#39;, &#39;brand&#39;, &#39;nodes&#39;, &#39;loc_name&#39;, &#39;old_name&#39;, &#39;wikidata&#39;, &#39;name:sv&#39;,
+       &#39;wikipedia&#39;, &#39;name:it&#39;, &#39;source&#39;, &#39;note&#39;, &#39;surface&#39;, &#39;url&#39;, &#39;lit&#39;,
+       &#39;fence_type&#39;, &#39;fixme&#39;, &#39;official_name&#39;, &#39;building:levels&#39;, &#39;roof:shape&#39;,
+       &#39;ways&#39;, &#39;type&#39;, &#39;area&#39;, &#39;lanes&#39;, &#39;bicycle&#39;, &#39;boundary&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
 </div>
 <p>Vapaa-aikaan liittyvissä paikkatiedoissa on sarake nimeltä ”leisure”. Katsotaan vielä mitä eri kohteita se pitää sisällään.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">leisure</span><span class="p">[</span><span class="s1">&#39;leisure&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;miniature_golf;escape_game;curling&#39; &#39;water_park&#39; &#39;playground&#39;
+ &#39;sports_centre&#39; &#39;marina&#39; &#39;arena&#39; &#39;slipway&#39; &#39;fitness_station&#39; &#39;sauna&#39;
+ &#39;pitch&#39; &#39;dance&#39; &#39;fitness_centre&#39; &#39;amusement_arcade&#39; &#39;adult_gaming_centre&#39;
+ &#39;bowling_alley&#39; &#39;park&#39; &#39;stadium&#39; &#39;miniature_golf&#39; &#39;dog_park&#39; &#39;*&#39; &#39;garden&#39;
+ &#39;ice_rink&#39; &#39;outdoor_seating&#39; &#39;beach_resort&#39; &#39;track&#39; &#39;nature_reserve&#39;]
 </pre></div>
 </div>
 </div>
@@ -556,6 +461,9 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/openstreetmap_17_0.png" src="../_images/openstreetmap_17_0.png" />
+</div>
 </div>
 <p>Huomataan, että piirretyt puistot ulottuvat kilometriä kauemmas keskustorilta. Määritellään vielä kuvaajalle rajat, jotta saamme rajattua saman alueen kuin aikaisemminkin. Tämä onnistuu <a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.xlim.html?highlight=xlim#matplotlib.pyplot.xlim"><code class="docutils literal notranslate"><span class="pre">plt.xlim()</span></code></a>- ja <a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.ylim.html?highlight=ylim#matplotlib.pyplot.ylim"><code class="docutils literal notranslate"><span class="pre">plt.ylim()</span></code></a>-funktioilla. Katsotaan rajoille sopivat lukuarvot kuvan akseleilta.</p>
 <div class="cell docutils container">
@@ -576,6 +484,9 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/openstreetmap_19_0.png" src="../_images/openstreetmap_19_0.png" />
 </div>
 </div>
 <p>Karttamme on nyt valmis. Sen avulla voimme tarkastella Tampereen keskustan katuverkostoa, rakennuksia ja puistoja. Kokeile itse tehdä oma karttasi jostain muusta paikasta tai lisää eri paikkatietoja tähän karttaan!</p>
