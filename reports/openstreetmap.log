@@ -32,10 +32,10 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-# Haetaan OpenStreetMapin katuverkosto "graph_from_address"-funktion avulla
-graph = ox.graph_from_address(address, dist=distance)
+# etsitään osoitteen avulla alueella olevat vapaa-aikaan liittyvät paikkatiedot käyttäen tagia "leisure": True
+leisure = ox.geometries_from_address(address, dist=distance, tags={"leisure":True})
 
-# Piirretään verkosto näytölle
-ox.plot_graph(graph)
+# katsotaan, mitä sarakkeita "leisure" pitää sisällään:
+leisure.columns
 -------------------
 
