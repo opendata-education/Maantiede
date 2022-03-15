@@ -32,12 +32,13 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-import osmnx as ox
-import matplotlib.pyplot as plt
+# eritellään kuvasta solmupisteet (nodes) ja reunat, eli tässä siis kadut (edges) omiksi muuttujikseen
+nodes, edges = ox.graph_to_gdfs(graph)
 
-address = "Keskustori 1, 33100, Tampere, Finland"
-distance = 500 # metriä
-graph = ox.graph_from_address(address, dist=distance, network_type='drive')
-ox.plot_graph(graph) # Katsotaan, miltä katuverkosto näyttää
+# etsitään osoitteen avulla alueella olevat rakennukset käyttäen tagia "building": True
+buildings = ox.geometries_from_address(address, dist=distance, tags = {'building': True} )
+
+# GeoDataFramen sisältämiä sarakkeita voidaan tarkastella seuraavasti
+print(buildings.columns)
 -------------------
 
