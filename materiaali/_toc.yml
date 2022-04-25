@@ -11,6 +11,7 @@ parts:
   - file: harjoitukset/openstreetmap
   - file: harjoitukset/lyhimman_reitin_analyysi
   - file: harjoitukset/1854_koleraepidemia
+  - file: harjoitukset/Ruoan_hiilipaastot_opettaja
 - caption: Lyhyitä esimerkkejä
   chapters:
   - file: harjoitukset/UV
