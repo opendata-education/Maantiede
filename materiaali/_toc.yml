@@ -3,9 +3,9 @@
 format: jb-book
 root: index
 parts:
-- file: intro
 - caption: Harjoitukset
   chapters:
+  - file: intro
   - file: harjoitukset/maailmankartta
   - file: harjoitukset/interaktiivinen_kartta
   - file: harjoitukset/lampotila_sademaara
