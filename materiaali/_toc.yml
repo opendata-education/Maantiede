@@ -1,7 +1,10 @@
 # Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
+format: jb-book
+root: index
 - file: intro
-- part: Harjoitukset
+parts:
+- caption: Harjoitukset
   chapters:
   - file: harjoitukset/maailmankartta
   - file: harjoitukset/interaktiivinen_kartta
@@ -9,8 +12,7 @@
   - file: harjoitukset/openstreetmap
   - file: harjoitukset/lyhimman_reitin_analyysi
   - file: harjoitukset/1854_koleraepidemia
-  
-- part: Lyhyitä esimerkkejä
+- caption: Lyhyitä esimerkkejä
   chapters:
   - file: harjoitukset/UV
   - file: harjoitukset/Lumensyvyys
