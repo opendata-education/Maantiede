@@ -2,8 +2,8 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 format: jb-book
 root: index
-- file: intro
 parts:
+- file: intro
 - caption: Harjoitukset
   chapters:
   - file: harjoitukset/maailmankartta
