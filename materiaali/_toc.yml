@@ -2,9 +2,9 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 format: jb-book
 root: intro
-parts:
-- caption: Harjoitukset
-  chapters:
+chapters:
+- file: harjoitukset/otsikko
+  sections:
   - file: harjoitukset/maailmankartta
   - file: harjoitukset/interaktiivinen_kartta
   - file: harjoitukset/lampotila_sademaara
@@ -12,7 +12,7 @@ parts:
   - file: harjoitukset/lyhimman_reitin_analyysi
   - file: harjoitukset/1854_koleraepidemia
   - file: harjoitukset/Ruoan_hiilipaastot_opettaja
-- caption: Lyhyitä esimerkkejä
-  chapters:
+- file: harjoitukset/esimerkit
+  sections:
   - file: harjoitukset/UV
   - file: harjoitukset/Lumensyvyys
